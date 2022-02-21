@@ -1,15 +1,25 @@
 import React,{useState} from 'react'
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
+ import { Typography } from '@mui/material';
 import MuiAppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import { styled, useTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
+import Divider from '@mui/material/Divider';
+import List from '@mui/material/List';
 
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
@@ -60,6 +70,8 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 export default function AppDrawer () {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
+    const [selected, setSelected] = useState('')
+    console.log(selected)
   
     const handleDrawerOpen = () => {
       setOpen(true);
@@ -106,7 +118,7 @@ export default function AppDrawer () {
               {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
             </IconButton>
           </DrawerHeader>
-          <Divider />
+          {/* <Divider />
           <List>
             {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
               <ListItem button key={text}>
@@ -117,10 +129,10 @@ export default function AppDrawer () {
               </ListItem>
             ))}
           </List>
-          <Divider />
+          <Divider /> */}
           <List>
             {['All mail', 'Trash', 'Spam'].map((text, index) => (
-              <ListItem button key={text}>
+              <ListItem onClick={()=>setSelected(text)} button key={text}>
                 <ListItemIcon>
                   {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                 </ListItemIcon>
