@@ -1,16 +1,37 @@
 import React,{useState} from 'react'
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
+ import { Typography } from '@mui/material';
 import MuiAppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import { styled, useTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
+import Divider from '@mui/material/Divider';
+import List from '@mui/material/List';
+import styles from '../../styles/Home.module.css'
+import Image from 'next/image';
+import Logo from "../../images/ANNI-Logo1 1.png"
+import { AccountBalanceWalletRounded, DashboardRounded, Logout, 
+  LogoutRounded, Person, PeopleRounded, ChatBubble, Info, MenuBook, Photo } from '@mui/icons-material';
 
 
-const drawerWidth = 240;
 
+const drawerWidth = 180;
+
+// const style = {
+//   paper: {
+//     background: "blue"
+//   }
+// }
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
     flexGrow: 1,
@@ -58,8 +79,11 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   
 
 export default function AppDrawer () {
+    // const classes = useStyles();
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
+    const [selected, setSelected] = useState(0)
+    console.log(selected)
   
     const handleDrawerOpen = () => {
       setOpen(true);
@@ -72,10 +96,11 @@ export default function AppDrawer () {
     return (
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
-        <AppBar position="fixed" open={open}>
+        <AppBar position="fixed" open={open} className={styles.appbar}>
           <Toolbar>
             <IconButton
-              color="inherit"
+             
+              color="primary"
               aria-label="open drawer"
               onClick={handleDrawerOpen}
               edge="start"
@@ -89,6 +114,16 @@ export default function AppDrawer () {
           </Toolbar>
         </AppBar>
         <Drawer
+           PaperProps={{
+            sx: {
+              backgroundColor: "#365C2A",
+              color: "white",
+              margin:"7px",
+              borderRadius:"8px"
+            }
+          }}
+          // classes={{ paper: classes.paper }}
+          className={styles.drawer}
           sx={{
             width: drawerWidth,
             flexShrink: 0,
@@ -102,11 +137,13 @@ export default function AppDrawer () {
           open={open}
         >
           <DrawerHeader>
+            <Image src={Logo}/>
             <IconButton onClick={handleDrawerClose}>
               {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
             </IconButton>
           </DrawerHeader>
-          <Divider />
+          
+          {/* <Divider />
           <List>
             {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
               <ListItem button key={text}>
@@ -117,14 +154,27 @@ export default function AppDrawer () {
               </ListItem>
             ))}
           </List>
-          <Divider />
+          <Divider /> */}
+          <br/>
+          <br/>
+          <br/>
           <List>
-            {['All mail', 'Trash', 'Spam'].map((text, index) => (
-              <ListItem button key={text}>
+            {['Home', 'My Account', 'Member Directory', 'Events', 'Chat', 'News & Updates','Insight & Publications',  'Photo Gallery', 'Logout' ].map((text, index) => (
+              <ListItem onClick={()=>setSelected(index)} className={index==selected? 'selectedNav':''}   key={text}>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {/* {index % 2 === 0 ? <InboxIcon className='drawerIcon'  /> 
+                  : <MailIcon className='drawerIcon'/>} */}
+                  {[<DashboardRounded className={index==selected? 'selectedNav':'drawerIcon'}  />, 
+                  <AccountBalanceWalletRounded className={index==selected? 'selectedNav':'drawerIcon'}  />,
+                  <Person className={index==selected? 'selectedNav':'drawerIcon'}  />, 
+                  <PeopleRounded className={index==selected? 'selectedNav':'drawerIcon'}  />,
+                  <ChatBubble className={index==selected? 'selectedNav':'drawerIcon'}  />,
+                  <Info className={index==selected? 'selectedNav':'drawerIcon'}  />,
+                  <MenuBook className={index==selected? 'selectedNav':'drawerIcon'} />,
+                  <Photo className={index==selected? 'selectedNav':'drawerIcon'}/>,
+                  <LogoutRounded className={index==selected? 'selectedNav':'drawerIcon'}/>][index]}
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText className='iconsText'  primary={text}  />
               </ListItem>
             ))}
           </List>

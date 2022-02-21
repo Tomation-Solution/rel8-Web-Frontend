@@ -1,6 +1,7 @@
 import styles from '../styles/Home.module.css'
 import Divider from '@mui/material/Divider';
 import {AppBar,Typography,Box, Container, Toolbar, Grid} from '@mui/material';
+import {TwitterIcon, Twitter, LinkedIn, Facebook, Instagram, YouTube} from '@mui/icons-material'
 import Link from 'next/link'
 
 // imoprt
@@ -21,11 +22,16 @@ export default function Footer (){
 //     </a>
 //   </footer>
 
+// Home
+// Events
+// Chats
+// Resources
+// Make Payment
 <footer>
       <Grid sx={{ backgroundColor: "#EFEFEF", padding:'20px'}}>
         <Toolbar variant="dense">
           <Grid container spacing={{ xs: 1, sm: 2, md: 4 }}>
-            <Grid item lg={4} xs={12} sm={4} sx={{ textAlign: "left" }}  >
+            <Grid item lg={3} xs={12} sm={4} sx={{ textAlign: "left" }}  >
                 <Typography variant='body1' fontWeight='bolder'  className='text' marginBottom={1}>
                     QuickLink
                 </Typography>
@@ -33,13 +39,19 @@ export default function Footer (){
                 Home
                 </Typography>
                 <Typography variant='body2' marginBottom={2} component="div" className='text'>
-                Excos
+                Events
+                </Typography>
+                <Typography variant='body2' marginBottom={2} component="div" className='text'>
+                Members
                 </Typography>
                 <Typography variant='body2' marginBottom={2} className='text'>
-                    Insight &amp; <br/> Publication
+                Chats
                 </Typography>
                 <Typography variant='body2' marginBottom={2} className='text'>
-                    Login
+                    Resources
+                </Typography>
+                <Typography variant='body2' marginBottom={2} className='text'>
+                    Payments
                 </Typography>
 
                
@@ -47,29 +59,30 @@ export default function Footer (){
                 {new Date().getFullYear()}&copy; All rights reserved.
               </Typography> */}
             </Grid>
-            <Grid item sm={4} xs={12} style={{ textAlign: "left" }}>
+            <Grid item sm={3} xs={12} style={{ textAlign: "left" }}>
                 <Typography variant='body1' fontWeight='bolder'  className='text' marginBottom={1}>
                         Social Media
                 </Typography>
               <Link
                 href="https://www.twitter.com"
                 underline="always"
-                sx={{ color: "white" }}
+                
+                // sx={{ color: "white" }}
               >
-                <Typography className='text' variant='body2' marginBottom={2}>Twitter</Typography>
+                <Typography className='text' justifyContent='center'  variant='body2' marginBottom={2}> <Twitter/> Twitter</Typography>
               </Link>
               <Link href="https://www.linkedin.com" underline="always">
                 {/* <LinkedIn /> */}
-                <Typography className='text' variant='body2' marginBottom={2}>Linkedin</Typography>
+                <Typography className='text' variant='body2' marginBottom={2}><LinkedIn marginTop={2}/>Linkedin</Typography>
               </Link>
               <Link href="https://www.facebook.com" underline="always">
-                <Typography className='text' variant='body2' marginBottom={2}>Facebook</Typography>
+                <Typography className='text' variant='body2' marginBottom={2}><Facebook/>Facebook</Typography>
               </Link>
               <Link href="https://www.youtube.com" underline="always">
-                <Typography className='text' variant='body2' marginBottom={2}>Youtube</Typography>
+                <Typography className='text' variant='body2' marginBottom={2}> <YouTube/> Youtube</Typography>
               </Link>
-              <Link href="https://www.instagram.com" underline="always">
-                <Typography className='text' variant='body2' marginBottom={2}> Instagram</Typography>
+              <Link href="https://www.instagram.com" underline="always" >
+                <Typography className='text' variant='body2' marginBottom={2} justify='center'><Instagram/> Instagram</Typography>
               </Link>
             </Grid>
             <Grid item xs={12} sm={3} style={{ textAlign: "left" }}>
@@ -83,6 +96,12 @@ export default function Footer (){
                 Opposite FCT High Court, Maitama, Abuja, 
                 Nigeria
                 </Typography>
+              
+                </Grid>
+
+                <Grid item xs={12} sm={3} style={{ textAlign: "left" }}>
+
+                
                 <Typography variant='body2' fontWeight='bold' className='text' >
                     Email
                 </Typography>
@@ -94,11 +113,11 @@ export default function Footer (){
                     Phone
                 </Typography>
                 <Typography variant='body2' s className='text'>
-                08023884843, 08023884843<br/>
-                08023884843
+                08023884843, 08023884843
                 </Typography>
                 </Grid>
           </Grid>
+          
         </Toolbar>
       </Grid>
       {/* <Toolbar /> */}

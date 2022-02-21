@@ -1,12 +1,14 @@
 import { Grid, Typography } from "@mui/material";
 import styles from '../styles/Home.module.css';
+import Map from '../images/MAP.png';
+import Image from "next/image";
 
 
 export default function MapHolder (){
     return (
         
-            <Grid container className={styles.mapBg}>
-                <Grid alignItems='center' item md={4} xs={12}>
+            <Grid container className={styles.mapBg} md={11} justifyContent='center' alignItems='center'>
+                <Grid  item md={4} xs={12} >
                     <Typography variant='h6' fontWeight='bold' className='text'>
                         Alumni Association of the National Institute (AANI)
                     </Typography>
@@ -14,8 +16,9 @@ export default function MapHolder (){
                     Select the Chapter of the Association you belong to from the map
                     </Typography>
                 </Grid>
-                <Grid item md={6}>
-                    <div id="map"></div>
+                <Grid item md={8}>
+                    {/* <div id="map"></div> */}
+                    <Image src={Map} height='400vh'/>
                 </Grid>
                 
             </Grid>
