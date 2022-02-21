@@ -31,9 +31,11 @@ export default function Navbar(){
                         <Typography className='text' variant="body2" component="div" sx={{ flexGrow: 1 }}>
                             Insight / Publication
                         </Typography>
-                        <Typography className='text' variant="body2" component="div" sx={{ flexGrow: 1 }}>
-                            Login
-                        </Typography>
+                        <Link href="/login">
+                            <Typography className='text' variant="body2" component="div" sx={{ flexGrow: 1 }}>
+                                Login
+                            </Typography>
+                        </Link>
                         <Button onClick={()=>setOpen(!open)}>hey</Button>
                     </Toolbar>
                 </Grid>
