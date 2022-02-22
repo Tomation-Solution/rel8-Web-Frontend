@@ -1,6 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import styles from '../styles/Home.module.css';
-import Map from '../images/MAP.png';
+import Map from '../images/MAP.PNG';
 import Image from "next/image";
 
 
