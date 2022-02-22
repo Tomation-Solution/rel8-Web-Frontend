@@ -26,12 +26,15 @@ export default function Navbar(){
                             Home
                         </Typography>
                         <Typography className='text' variant="body2" component="div" sx={{ flexGrow: 1 }}>
-                            Excos
+                            Events
                         </Typography>
                         <Typography className='text' variant="body2" component="div" sx={{ flexGrow: 1 }}>
-                            Insight / Publication
+                            Resources
                         </Typography>
-                        <Link href="/login">
+                        <Typography className='text' variant="body2" component="div" sx={{ flexGrow: 1 }}>
+                            Meet Our People
+                        </Typography>
+                        <Link href="/login" button>
                             <Typography className='text' variant="body2" component="div" sx={{ flexGrow: 1 }}>
                                 Login
                             </Typography>

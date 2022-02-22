@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import Box from '@mui/material/Box';
+import {Box, Grid, Button, Avatar} from '@mui/material';
 import Drawer from '@mui/material/Drawer';
  import { Typography } from '@mui/material';
 import MuiAppBar from '@mui/material/AppBar';
@@ -20,8 +20,11 @@ import List from '@mui/material/List';
 import styles from '../../styles/Home.module.css'
 import Image from 'next/image';
 import Logo from "../../images/ANNI-Logo1 1.png"
-import { AccountBalanceWalletRounded, DashboardRounded, Logout, 
-  LogoutRounded, Person, PeopleRounded, ChatBubble, Info, MenuBook, Photo } from '@mui/icons-material';
+import NewsImage from "../../images/Vectorlanding.png"
+import { AccountBalanceWalletRounded, DashboardRounded, Logout, ArrowBack,
+  LogoutRounded, Person, PeopleRounded, ChatBubble, Info, MenuBook, Photo, Settings, Notifications } from '@mui/icons-material';
+import Newscard from '../NewsCard';
+import EventCard from '../EventCard';
 
 
 
@@ -108,9 +111,19 @@ export default function AppDrawer () {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" noWrap component="div">
-              Persistent drawer
+            <IconButton>
+              <ArrowBack />
+            </IconButton>
+            <Typography variant="body2" fontWeight='bolder' className='text' noWrap component="div">
+              General Dashboard
             </Typography>
+            
+            
+                <Avatar className='' />
+              
+                <Settings className='text ' alignItems='right' />
+                <Notifications className='text '/>
+              
           </Toolbar>
         </AppBar>
         <Drawer
@@ -181,7 +194,134 @@ export default function AppDrawer () {
         </Drawer>
         <Main open={open}>
           <DrawerHeader />
-          <Typography paragraph>
+          <Grid container md={12} justifyContent='space-around'>
+              <Grid item md={3}>
+                <Button variant='contained' size='small' className={[styles.button, 'button-lower'] }>Exco Dashboard</Button>
+              </Grid>
+              <Grid item md={3}>
+                <Button variant='contained' size='small' className={[styles.button, 'button-lower'] }>Commitee Dashboard</Button>
+              </Grid>
+              <Grid item md={3}>
+                <Button variant='contained' size='small' className={[styles.button, 'button-lower'] }>Sub Commitee Dashboard</Button>
+              </Grid>
+          </Grid>
+          <br/>
+          
+          <Grid container md={12} justifyContent='space-around'>
+              <Grid item md={8} className='light-green-bg rounded-corners'>
+                <Grid container md={11}  justifyContent='space-between' marginX={3} marginY={2}>
+                  <Grid item>
+                    <Typography fontWeight='500'  className='text '>
+                      Events Dashboard
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography fontWeight='400' className='text light-text'>
+                      Aug 23, 2022
+                    </Typography>
+                  </Grid>
+                </Grid>
+
+                <Grid>
+                  <Typography fontWeight='300' marginX={3} className='text '>
+                    Alumni Thanksgiving Day 2022   -    Feb., 2 2022
+                  </Typography>
+                </Grid>
+
+                <Grid md={4} marginRight={2} marginTop={2} style={{float:'right'}}>
+                  <Button variant='contained' size='small' className={[styles.button, 'button-lower'] }>Register to Attend</Button>   
+                </Grid>
+
+              </Grid>
+              <Grid item md={3} className='light-green-bg rounded-corners' paddingY={3} >
+                  <Grid container justifyContent='space-evenly'>
+                  <Grid item>
+                    <AccountBalanceWalletRounded/>
+                  </Grid>
+                  <Grid item>
+                    <Typography fontWeight='bold' className='text' marginLeft={-5} >50,000</Typography>
+                  </Grid>
+                  <Grid container justifyContent='space-around'>
+                    <Typography fontWeight='normal' className='text' >Oustanding</Typography>
+                    <Grid md={8}>
+                    <br/>
+
+                      <Button variant='contained' size='small' className={[styles.button, 'button-lower'] }>
+                        Pay
+                      </Button>
+                    </Grid>
+                  </Grid>
+                  </Grid>
+              </Grid>
+          </Grid>
+
+
+          {/* News */}
+
+        <Grid container>
+          <Grid container justifyContent='space-between' marginY={2} marginX={3} md={8}>
+            <Grid item>
+              <Typography className='text' fontWeight='500'>Latest AANI News</Typography>
+            </Grid>
+            <Grid item>
+              <Typography className='text' fontWeight='500'>All News</Typography>
+            </Grid>
+
+            {/* New Details */}
+            <Grid container justifyContent='space-between'>
+               <Newscard 
+                  title='Lorem ipsum.' 
+                  image={NewsImage}
+                  body='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.'
+                  />
+               <Newscard 
+                  title='Lorem ipsum.' 
+                  image={NewsImage}
+                  body='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.'
+                  />
+            </Grid>
+
+            {/* Exco Members */}
+
+            
+          </Grid>
+          
+          <Grid item md={3}  >
+                  <br/>
+              <Typography marginLeft={2} fontWeight='bold' marginBottom={1}>EXCO MEMBERS</Typography>
+              <Grid container justifyContent='space-around' marginLeft={3} className='light-grey-bg rounded-corners' padding={3}>
+                  <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
+                  <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
+                  <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
+                  <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
+                  <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
+                  <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
+                  <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
+                  <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
+                  {/* <br/> */}
+                  <Button style={{margin:'0 auto'}} className='button-lower'>See All</Button>
+              </Grid>
+          </Grid>
+        </Grid>
+        <Typography marginLeft={2}>Upcoming Events</Typography>
+
+        <Grid container justifyContent='space-between' padding={2} className='rounded-corners light-grey-bg'>
+          {/* <br/> */}
+          <EventCard 
+          title='Alumni Thanksgiving Day 2022'
+          body='The Annual Alumni Thanksgiving Day 2022'
+          />
+
+<EventCard 
+          title='Alumni Thanksgiving Day 2022'
+          body='The Annual Alumni Thanksgiving Day 2022'
+          />
+          <EventCard 
+          title='Alumni Thanksgiving Day 2022'
+          body='The Annual Alumni Thanksgiving Day 2022'
+          />
+        </Grid>
+          {/* <Typography paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
             enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
@@ -207,7 +347,7 @@ export default function AppDrawer () {
             tristique sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
             eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
             posuere sollicitudin aliquam ultrices sagittis orci a.
-          </Typography>
+          </Typography> */}
         </Main>
       </Box>
     );

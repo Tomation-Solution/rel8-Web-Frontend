@@ -20,6 +20,15 @@ a {
   color:#000;
   font-family: poppins;
 }
+.light-text{
+  color:#767676;
+  font-family: poppins;
+  font-size: small;
+}
+
+.small-text{
+
+}
 
 .drawerIcon{
   color:#fff
@@ -37,4 +46,33 @@ a {
 .iconsText{
   font-size: 12 !important;
   font-family: poppins !important;
+}
+
+.light-green-bg{
+  background-color: #E1F1DC;
+}
+
+.light-grey-bg{
+  background-color: #F5F5F4;
+}
+
+.rounded-corners{
+  border-radius: 20px;
+}
+
+.button-lower{
+  text-transform: none;
+}
+
+.white-bg{
+  background-color: white;
+}
+
+.short-btn{
+  height:16px
+}
+
+.right{
+  position: absolute;
+  right: 0;
 }
