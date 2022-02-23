@@ -11,7 +11,7 @@ export default function Navbar(){
     console.log(open)
 
    return( 
-   <AppBar className={styles.appbar}>
+   <AppBar className={styles.appbar} style={{backgroundColor='#fff'}}>
        {/* <Container> */}
        <Grid container>
         {/* <Toolbar > */}

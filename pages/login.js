@@ -21,7 +21,7 @@ export default function Login (){
             {/* <center><Image src={Logo}/></center> */}
             <br/>
             
-            <Grid item md={12} className={styles.card} md={9} sm={10}  style={{margin:'0 auto'}} >
+            <Grid item md={12} className={styles.card} md={6} sm={10}  style={{margin:'0 auto'}} >
                 <Typography className='text' textAlign='center' marginBottom={2} fontWeight='bolder' >USER LOGIN</Typography>
                <Typography className='text' fontWeight='normal' textAlign='center' marginBottom={2} variant='subtitle2' color='InactiveCaption'>
                Click here to login into your Dashboard </Typography>
