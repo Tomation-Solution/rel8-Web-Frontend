@@ -99,7 +99,7 @@ export default function AppDrawer () {
     return (
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
-        <AppBar position="fixed" open={open} className={styles.appbar}>
+        <AppBar position="fixed" open={open} style={{backgroundColor:'white'}} className={styles.appbar}>
           <Toolbar>
             <IconButton
              
@@ -122,7 +122,9 @@ export default function AppDrawer () {
                 <Avatar className='' />
               
                 <Settings className='text ' alignItems='right' />
+                <IconButton edge='end'>
                 <Notifications className='text '/>
+                </IconButton>
               
           </Toolbar>
         </AppBar>
