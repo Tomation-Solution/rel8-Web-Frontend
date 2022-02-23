@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar"
 import Logo from '../images/ANNI-Logo1 1.png'
 import Image from "next/image"
 import Footer from "../components/Footer"
+import GreenButton from "../components/Buttonn"
 export default function Login (){
 
     const [showPassword, setShowPassword]= useState(true)
@@ -16,11 +17,11 @@ export default function Login (){
             <Navbar/>
             <HeroSection/>
             
-            <Grid className={styles.loginBg}  >
+            <Grid className={styles.loginBg}   >
             {/* <center><Image src={Logo}/></center> */}
             <br/>
             
-            <Grid item md={12} className={styles.card}  style={{margin:'0 auto'}} >
+            <Grid item md={12} className={styles.card} md={9} sm={10}  style={{margin:'0 auto'}} >
                 <Typography className='text' textAlign='center' marginBottom={2} fontWeight='bolder' >USER LOGIN</Typography>
                <Typography className='text' fontWeight='normal' textAlign='center' marginBottom={2} variant='subtitle2' color='InactiveCaption'>
                Click here to login into your Dashboard </Typography>
@@ -70,7 +71,10 @@ export default function Login (){
                     <Grid item><Typography className='text' variant='subtitle2' fontWeight='normal' color='grey'>
                         <Checkbox/>Remember me</Typography></Grid>
                 </Grid>
-                <Button variant='contained' size='large' className={styles.button}>Login</Button>
+                <GreenButton text='Login' radius='10px'
+               textColor='white' paddingY={1} paddingX={2} bg='#436937'/>
+                {/* <GreenButton text='Login' /> */}
+                {/* <Button variant='contained' size='large' className={styles.button}>Login</Button> */}
             </Grid>
             <br/>
             </Grid>
