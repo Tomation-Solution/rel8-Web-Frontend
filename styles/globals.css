@@ -52,8 +52,14 @@ a {
   background-color: #E1F1DC;
 }
 
+.dark-green-bg{
+  background-color: #365C2A;
+}
+
+
 .light-grey-bg{
   background-color: #F5F5F4;
+  /* border: 1px solid red; */
 }
 
 .rounded-corners{
@@ -75,4 +81,9 @@ a {
 .right{
   position: absolute;
   right: 0;
+}
+
+.white-text{
+  color:#fff;
+  font-family: poppins;
 }
