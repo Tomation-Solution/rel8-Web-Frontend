@@ -87,3 +87,8 @@ a {
   color:#fff;
   font-family: poppins;
 }
+
+.nav-link{
+  cursor: pointer;
+  margin:2px
+}

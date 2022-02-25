@@ -31,7 +31,7 @@ export default function Footer (){
       <Grid sx={{ backgroundColor: "#EFEFEF", padding:'20px'}}>
         <Toolbar variant="dense">
           <Grid container spacing={{ xs: 1, sm: 2, md: 4 }}>
-            <Grid item lg={3} xs={12} sm={4} sx={{ textAlign: "left" }}  >
+            <Grid item lg={2} xs={12} sm={4} sx={{ textAlign: "left" }}  >
                 <Typography variant='body1' fontWeight='bolder'  className='text' marginBottom={1}>
                     QuickLink
                 </Typography>
@@ -44,6 +44,12 @@ export default function Footer (){
                 <Typography variant='body2' marginBottom={2} component="div" className='text'>
                 Members
                 </Typography>
+               
+            </Grid>
+            <Grid item lg={2} xs={12} sm={4} sx={{ textAlign: "left" }}  >
+                <Typography variant='body1' fontWeight='bolder'  className='text' marginBottom={1}>
+                    QuickLink
+                </Typography>
                 <Typography variant='body2' marginBottom={2} className='text'>
                 Chats
                 </Typography>
@@ -53,13 +59,8 @@ export default function Footer (){
                 <Typography variant='body2' marginBottom={2} className='text'>
                     Payments
                 </Typography>
-
-               
-              {/* <Typography sx={{ color: "white" }}>
-                {new Date().getFullYear()}&copy; All rights reserved.
-              </Typography> */}
             </Grid>
-            <Grid item sm={3} xs={12} style={{ textAlign: "left" }}>
+            <Grid item sm={2} xs={12} style={{ textAlign: "left" }}>
                 <Typography variant='body1' fontWeight='bolder'  className='text' marginBottom={1}>
                         Social Media
                 </Typography>
@@ -78,6 +79,14 @@ export default function Footer (){
               <Link href="https://www.facebook.com" underline="always">
                 <Typography className='text' variant='body2' marginBottom={2}><Facebook/>Facebook</Typography>
               </Link>
+              
+            </Grid>
+
+            <Grid item sm={2} xs={12} style={{ textAlign: "left" }}>
+                <Typography variant='body1' fontWeight='bolder'  className='text' marginBottom={1}>
+                        Social Media
+                </Typography>
+  
               <Link href="https://www.youtube.com" underline="always">
                 <Typography className='text' variant='body2' marginBottom={2}> <YouTube/> Youtube</Typography>
               </Link>
@@ -85,7 +94,9 @@ export default function Footer (){
                 <Typography className='text' variant='body2' marginBottom={2} justify='center'><Instagram/> Instagram</Typography>
               </Link>
             </Grid>
-            <Grid item xs={12} sm={3} style={{ textAlign: "left" }}>
+
+
+            <Grid item xs={12} sm={2} style={{ textAlign: "left" }}>
 
                 <Typography variant='body1' fontWeight='bolder' className='text' marginBottom={1}>
                     Contact Details
@@ -99,7 +110,7 @@ export default function Footer (){
               
                 </Grid>
 
-                <Grid item xs={12} sm={3} style={{ textAlign: "left" }}>
+                <Grid item xs={12} sm={2} style={{ textAlign: "left" }}>
 
                 
                 <Typography variant='body2' fontWeight='bold' className='text' >
@@ -117,8 +128,13 @@ export default function Footer (){
                 </Typography>
                 </Grid>
           </Grid>
-          
+         
         </Toolbar>
+        <Grid justifyContent='space-around' container>
+          <Typography textAlign='center' className='text' sx={{ color: "black" }}>
+                &copy; {new Date().getFullYear()} All rights reserved.
+              </Typography>
+          </Grid>
       </Grid>
       {/* <Toolbar /> */}
     </footer>
