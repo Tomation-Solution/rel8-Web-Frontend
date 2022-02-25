@@ -27,7 +27,7 @@ import Chat from './Chat';
 import News from './News';
 import Gallery from './Gallery';
 import Link from 'next/link'
-import SingleChat from './singleChat';
+import SingleChat from './SingleChat';
 // import BasicModal from '../popModal';
 
 
