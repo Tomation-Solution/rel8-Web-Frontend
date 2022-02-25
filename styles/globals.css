@@ -87,3 +87,41 @@ a {
   color:#fff;
   font-family: poppins;
 }
+
+.nav-link{
+  cursor: pointer;
+  margin:2px
+}
+
+/* #style-1::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+} */
+
+
+  .chat-bg::-webkit-scrollbar {
+    width: 7px;
+    /* height: 50px; */
+    /* height: 50vh */
+  }
+  
+  /* Track */
+  .chat-bg::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    
+  }
+   
+  /* Handle */
+  .chat-bg::-webkit-scrollbar-thumb {
+    background: #436937; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  .chat-bg::-webkit-scrollbar-thumb:hover {
+    background: #436937; 
+  }
+/* } */

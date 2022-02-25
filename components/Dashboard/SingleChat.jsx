@@ -1,13 +1,11 @@
-import { AddToPhotos, SendRounded } from "@mui/icons-material"
-import { Typography, Grid, TextField, IconButton } from "@mui/material"
-import { useState } from "react"
+import { useState } from "react";
+import { AddToPhotos, SendRounded } from "@mui/icons-material";
+import { Grid, Typography, IconButton, TextField } from "@mui/material";
 import GreenButton from "../Buttonn";
-// import { makeStyles } from "@material-ui/core/styles";
 
 
-export default function Chat (props){
-
-    const date = new Date();
+export default function SingleChat (){
+        const date = new Date();
     console.log(text)
     const [text, setText] = useState('')
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
@@ -46,7 +44,7 @@ export default function Chat (props){
     return(
         <Grid>
             <Grid container justifyContent='space-between' paddingY={2}>
-                <Typography marginBottom={2} className='text'>General Chatroom</Typography>
+                <Typography marginBottom={2} className='text'>Private Chatroom</Typography>
                 <GreenButton text='Private Chat' click={()=>props.setSelected(9)} radius='10px'
                 textColor='white' paddingY={1} paddingX={2} bg='#436937'
                 />
@@ -103,4 +101,5 @@ export default function Chat (props){
             </Grid>
         </Grid>
     )
-}
+    
+} 

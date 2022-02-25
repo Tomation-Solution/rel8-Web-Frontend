@@ -1,13 +1,12 @@
 import { Grid,TextField, Button, Table, TableRow,TableHead, TableBody, TableCell, Typography } from "@mui/material";
 import GreenButton from "../Buttonn";
 import { SearchRounded } from "@mui/icons-material";
+import HeadText from "./DashboardHead";
 
 export default function MemberDirectory(){
     return(
         <Grid >
-            <Typography className='text' fontWeight='bold' marginX={2}>
-                Members Directory
-            </Typography>
+            <HeadText text='Members Directory'/>
             <br/>
             <Grid container justifyContent='space-around' md={12} marginTop={5}  >
                 <Grid item md={8}>

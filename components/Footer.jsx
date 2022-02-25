@@ -30,67 +30,108 @@ export default function Footer (){
 <footer>
       <Grid sx={{ backgroundColor: "#EFEFEF", padding:'20px'}}>
         <Toolbar variant="dense">
-          <Grid container spacing={{ xs: 1, sm: 2, md: 4 }}>
-            <Grid item lg={3} xs={12} sm={4} sx={{ textAlign: "left" }}  >
-                <Typography variant='body1' fontWeight='bolder'  className='text' marginBottom={1}>
+          <Grid container spacing={{ xs: 1, sm: 2, md: 4 }} >
+            <Grid item lg={2} xs={12} sm={4} sx={{ textAlign: "left" }}  >
+                <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} variant='body1' fontWeight='bolder'  className='text' marginBottom={1}>
                     QuickLink
                 </Typography>
-                <Typography variant='body2' marginBottom={2} className='text'>
+                <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}}  variant='body2' marginBottom={2} className='text'>
                 Home
                 </Typography>
-                <Typography variant='body2' marginBottom={2} component="div" className='text'>
+                <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} variant='body2' marginBottom={2} component="div" className='text'>
                 Events
                 </Typography>
-                <Typography variant='body2' marginBottom={2} component="div" className='text'>
+                <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} variant='body2' marginBottom={2} component="div" className='text'>
                 Members
                 </Typography>
-                <Typography variant='body2' marginBottom={2} className='text'>
+               
+            </Grid>
+            <Grid item lg={2} xs={12} sm={4} sx={{ textAlign: "left" }}  >
+                <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} variant='body1' fontWeight='bolder'  className='text' marginBottom={1}>
+                    QuickLink
+                </Typography>
+                <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} variant='body2' marginBottom={2} className='text'>
                 Chats
                 </Typography>
-                <Typography variant='body2' marginBottom={2} className='text'>
+                <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} variant='body2' marginBottom={2} className='text'>
                     Resources
                 </Typography>
-                <Typography variant='body2' marginBottom={2} className='text'>
+                <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} variant='body2' marginBottom={2} className='text'>
                     Payments
                 </Typography>
-
-               
-              {/* <Typography sx={{ color: "white" }}>
-                {new Date().getFullYear()}&copy; All rights reserved.
-              </Typography> */}
             </Grid>
-            <Grid item sm={3} xs={12} style={{ textAlign: "left" }}>
+{/* Social media group 1 */}
+
+            <Grid item sm={2} textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}}  xs={12} >
                 <Typography variant='body1' fontWeight='bolder'  className='text' marginBottom={1}>
                         Social Media
                 </Typography>
-              <Link
-                href="https://www.twitter.com"
-                underline="always"
-                
-                // sx={{ color: "white" }}
-              >
-                <Typography className='text' justifyContent='center'  variant='body2' marginBottom={2}> <Twitter/> Twitter</Typography>
+
+              <Link href="https://www.twitter.com" underline="always">
+                <Grid container className='nav-link'>
+                  <Twitter/> 
+                  <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}}  className='text'   variant='body2' marginBottom={2}> 
+                    Twitter
+                  </Typography>
+                </Grid>
               </Link>
-              <Link href="https://www.linkedin.com" underline="always">
-                {/* <LinkedIn /> */}
-                <Typography className='text' variant='body2' marginBottom={2}><LinkedIn marginTop={2}/>Linkedin</Typography>
+
+
+              <Link  href="https://www.linkedin.com" underline="always">
+                <Grid container  className='nav-link' >
+                  <LinkedIn marginTop={2} />
+                  <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} className='text ' variant='body2' marginBottom={2}>
+                    Linkedin</Typography>
+                </Grid>
               </Link>
+
               <Link href="https://www.facebook.com" underline="always">
-                <Typography className='text' variant='body2' marginBottom={2}><Facebook/>Facebook</Typography>
-              </Link>
-              <Link href="https://www.youtube.com" underline="always">
-                <Typography className='text' variant='body2' marginBottom={2}> <YouTube/> Youtube</Typography>
-              </Link>
-              <Link href="https://www.instagram.com" underline="always" >
-                <Typography className='text' variant='body2' marginBottom={2} justify='center'><Instagram/> Instagram</Typography>
+                <Grid container className='nav-link'>
+                  <Facebook marginTop={2}/>
+                  <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} className='text' variant='body2' marginBottom={2}>
+                    Facebook
+                  </Typography>
+                </Grid>
               </Link>
             </Grid>
-            <Grid item xs={12} sm={3} style={{ textAlign: "left" }}>
 
-                <Typography variant='body1' fontWeight='bolder' className='text' marginBottom={1}>
+          {/* //Social Media Group 2 */}
+
+            <Grid item sm={2} xs={12} style={{ textAlign: "left" }}>
+                <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}}  variant='body1' fontWeight='bolder'  className='text' marginBottom={1}>
+                        Social Media
+                </Typography>
+
+              <Grid container className='nav-link'>
+                <Link href="https://www.youtube.com" underline="always">
+                  <>
+                    <YouTube/>
+                    <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} className='text ' variant='body2' marginBottom={2}> 
+                    Youtube</Typography>
+                   </>
+                </Link>
+              </Grid>
+
+              <Grid container className='nav-link'>
+                <Link href="https://www.instagram.com" underline="always" >
+                  <>
+                    <Instagram/> 
+                    <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} className='text nav-link' variant='body2' marginBottom={2} justify='center'>
+                      Instagram
+                    </Typography>
+                  </>
+                </Link>
+              </Grid>
+
+            </Grid>
+
+
+            <Grid item xs={12} sm={2} style={{ textAlign: "left" }}>
+
+                <Typography variant='body1' textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} fontWeight='bolder' className='text' marginBottom={1}>
                     Contact Details
                 </Typography>
-                <Typography variant='body2' className='text'>
+                <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} variant='body2' className='text'>
                 AANI National Secretariat 
                 AANI House,<br/>  Plot 417, Tigris Crecent, <br/>
                 Opposite FCT High Court, Maitama, Abuja, 
@@ -99,26 +140,31 @@ export default function Footer (){
               
                 </Grid>
 
-                <Grid item xs={12} sm={3} style={{ textAlign: "left" }}>
+                <Grid item xs={12} sm={2} style={{ textAlign: "left" }}>
 
                 
-                <Typography variant='body2' fontWeight='bold' className='text' >
+                <Typography variant='body2' textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} fontWeight='bold' className='text' >
                     Email
                 </Typography>
-                <Typography className='text' variant='body2'>
+                <Typography className='text' textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} variant='body2'>
                 aanimni@gmail.com <br/>
                 aanimni@aol.com,
                 </Typography>
-                <Typography variant='body2' fontWeight='bold' className='text' marginBottom={1}>
+                <Typography variant='body2' textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} fontWeight='bold' className='text' marginBottom={1}>
                     Phone
                 </Typography>
-                <Typography variant='body2' s className='text'>
+                <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} variant='body2' s className='text'>
                 08023884843, 08023884843
                 </Typography>
                 </Grid>
           </Grid>
-          
+         
         </Toolbar>
+        <Grid justifyContent='space-around' container>
+          <Typography textAlign='center' textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} className='text' sx={{ color: "black" }}>
+                &copy; {new Date().getFullYear()} All rights reserved.
+              </Typography>
+          </Grid>
       </Grid>
       {/* <Toolbar /> */}
     </footer>

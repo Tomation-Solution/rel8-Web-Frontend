@@ -31,7 +31,7 @@ export default function Events(){
                                 18
                             </Typography>
                             <Typography fontWeight='400' className='text' variant='subtitle2'>
-                                National Events
+                                State Events
                             </Typography>
                         </Grid>
 
@@ -40,7 +40,7 @@ export default function Events(){
                                 18
                             </Typography>
                             <Typography fontWeight='400' className='text' variant='subtitle2'>
-                                National Events
+                                Members Events
                             </Typography>
                         </Grid>
                     </Grid>
