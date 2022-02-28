@@ -5,6 +5,7 @@ import NewsImage from '../../images/Vectorlanding.png'
 import EventCard from "../EventCard";
 import Newscard from "../NewsCard";
 import GreenButton from "../Buttonn";
+import { Box } from "@mui/system";
 
 export default function Home(){
     return(
@@ -122,8 +123,9 @@ export default function Home(){
                   <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
                   <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
                   <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
-                  {/* <br/> */}
-                  <Button style={{margin:'0 auto'}} className='button-lower'>See All</Button>
+                  <Box>
+                    <Button style={{margin:'0 auto'}} className='button-lower'>See All</Button>
+                  </Box>
               </Grid>
           </Grid>
         </Grid>

@@ -66,10 +66,12 @@ export default function Login (){
                     />
                 </Grid>
                 <br/>
-                <Grid container justifyContent='space-between'>
+                <Grid container alignItems='center' justifyContent='space-between' paddingY={1}>
                     <Grid item><Typography className='text' variant='subtitle2' fontWeight='normal' color='grey'>Forgot Password?</Typography></Grid>
-                    <Grid item><Typography className='text' variant='subtitle2' fontWeight='normal' color='grey'>
-                        <Checkbox/>Remember me</Typography></Grid>
+                    <Grid item >
+                        <Typography className='text' variant='subtitle2' fontWeight='normal' color='grey'>
+                        <Checkbox/>Remember me</Typography>
+                    </Grid>
                 </Grid>
                 <GreenButton text='Login' radius='10px'
                textColor='white' paddingY={1} paddingX={2} bg='#436937'/>

@@ -40,7 +40,7 @@ export default function MyAccount(){
                             <TableRow >
                                 <TableCell className='light-text'>1</TableCell>
                                 <TableCell className='light-text'>Annual Exco Due</TableCell>
-                                <TableCell className='light-text'>N 13,000</TableCell>
+                                <TableCell className='light-text'>N 213,000</TableCell>
                                 <TableCell className='light-text'>11-12-2022</TableCell>
                                 <TableCell style={{width:'20%'}} >
                                     <GreenButton marginX={2} text='Pay' bg='#436937' radius='10px' 
@@ -53,8 +53,8 @@ export default function MyAccount(){
                             <TableRow >
                                 <TableCell className='light-text'>2</TableCell>
                                 <TableCell className='light-text'>Ade Bolaji</TableCell>
-                                <TableCell className='light-text'>deboyeJohn@gmail.com</TableCell>
-                                <TableCell className='light-text'>08023823812</TableCell>
+                                <TableCell className='light-text'>N 133,000</TableCell>
+                                <TableCell className='light-text'>11-12-2022</TableCell>
                                 <TableCell className='light-text'>
                                     <GreenButton marginX={2} text='Reciept' bg='#436937' radius='10px' 
                                     paddingY={1} paddingX={1} textColor='white'/>

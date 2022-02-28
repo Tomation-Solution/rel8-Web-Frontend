@@ -13,16 +13,16 @@ export default function ChildNewsCard (props){
                         </Typography>
                     </Grid>
                     <Grid item sm={3}>
-                        <Image height='900px' src={props.image} />
+                        <Image height='900px' src={props.image} className='rounded-corners-small' />
                     </Grid>
                     <Grid item paddingLeft={1} sm={9}>
                         <Typography variant='subtitle2' fontWeight='400' className='text'> 
                             {props.title}
                         </Typography>
                     </Grid>
-                    <Link href="/">
-                        <Typography variant='caption' fontWeight='500' className='text nav-link green-text'>Read More</Typography>
-                    </Link>
+                    {/* <Link href="/"> */}
+                        <Typography onClick={props.click} variant='caption' fontWeight='500' className='text nav-link green-text'>Read More</Typography>
+                    {/* </Link> */}
                 </Grid>
             </Grid>
         </Grid>
