@@ -1,13 +1,17 @@
 import { useState } from "react";
 import { AddToPhotos, SendRounded } from "@mui/icons-material";
-import { Grid, Typography, IconButton, TextField } from "@mui/material";
+import { Grid, Typography, IconButton, TextField, InputAdornment, Icon } from "@mui/material";
 import GreenButton from "../Buttonn";
+import Image from "next/image";
+import ChatImage from '../../images/IMG-20190508-WA0001 1 (1).png'
+import ChatCard from "../ChatCard";
 
 
 export default function SingleChat (){
         const date = new Date();
     console.log(text)
     const [text, setText] = useState('')
+    const [user, setUser] = useState('')
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
     ];
@@ -45,60 +49,104 @@ export default function SingleChat (){
         <Grid>
             <Grid container justifyContent='space-between' paddingY={2}>
                 <Typography marginBottom={2} className='text'>Private Chatroom</Typography>
-                <GreenButton text='Private Chat' click={()=>props.setSelected(9)} radius='10px'
+                <GreenButton text='General Chat' click={()=>props.setSelected(9)} radius='10px'
                 textColor='white' paddingY={1} paddingX={2} bg='#436937'
                 />
             </Grid>
 
-            <Grid  sx={{height:'75vh'}} className='rounded-corners light-green-bg' paddingY={2}>
-                <Grid className='chat-bg' sx={{height:'70vh', overflow:'scroll', overflowX:'hidden'}} >
-                    {messages.map((e)=>
-                    (e.sender=='me' ?
-                        <Grid container marginX={3} marginY={1} sx={{maxWidth:'60%', minWidth:'10%', borderRadius:'10px', float:'right'}} paddingX={1} paddingBottom={1} className='dark-green-bg'>
-                            <Grid container >
-                                <Typography textAlign='right' variant='caption' sx={{size:'7px', width:'100%'}}  fontWeight='300' className='white-text' > {e.date + ' - ' + e.time} </Typography>
+            <Grid container>
+                
+                <Grid item lg={3} marginRight={2} sx={{height:'75vh'}} className='rounded-corners ' paddingY={2}>
+                    <Grid className='light-grey-bg rounded-corners' paddingX={2} marginBottom={1} paddingY={1} >
+                        <TextField 
+                            variant='standard' 
+                            size='small' 
+                            fullWidth
+                            InputProps={{disableUnderline:'true'}}
+                            // style={{width:'100%'}}
+                            placeholder='Search'
+                            // inputProps={InputAdornment:(<Icon name='hey'/>)}
+                        />
+                    </Grid>
+                    { [
+                        {id:1 , 'time':'10:40 am', date:'Feb.2, 2022', image:ChatImage, name:'Ola James', message:'Hello, how are you'},
+                        {id:2 ,'time':'10:51 am', date:'Feb.2, 2022', image:ChatImage, name:'Abubakar Yusuf', message:'How have you been'},
+                        {id:3 ,'time':'09:30 pm', date:'Feb.2, 2022', image:ChatImage, name:'Chukwu Mike', message:'Are you still up for nominations?'},
+                        {id:4 ,'time':'10:51 am', date:'Feb.2, 2022', image:ChatImage, name:'Justice Jane', message:'How about the exxcuive meeting'}
+                    ].map((e)=><Grid onClick={()=>setUser(e)}>
+                        <ChatCard bg={e.id == user.id ?'light-green-bg':'light-grey-bg'} time={e.time} date={e.date} image={e.image} name={e.name} message={e.message} />
+                    </Grid>)
+                    // <ChatCard time='10:43 am' date='Feb.2, 2022' image={ChatImage} name='Abubakar Yusuf' message='How have you been' />
+                    // <ChatCard time='09:30 pm' date='Feb.2, 2022' image={ChatImage} name='Chukwu Mie' message='Are ou still up for nominations?' />
+                    // <ChatCard time='05:30 am' date='Feb.3, 2022' image={ChatImage} name='Justice Jane' message='How about the exxcuive meeting' />
+                    }
+                    
+                </Grid>
+
+                <Grid item lg={8} >
+                    {user ?
+                    <ChatCard image={user.image} name={user.name} message='sddsdsds' header={true}/>
+                    :''
+                    }
+                    <Grid item lg={12} sx={{height:'75vh'}} className='rounded-corners light-green-bg' paddingY={2}>
+                        { user ?
+                        <Grid className='chat-bg' sx={{height:'70vh', overflow:'scroll', overflowX:'hidden'}} >
+                            {messages.map((e)=>
+                            (e.sender=='me' ?
+                                <Grid container marginX={3} marginY={1} sx={{maxWidth:'60%', minWidth:'10%', borderRadius:'10px', float:'right'}} paddingX={1} paddingBottom={1} className='dark-green-bg'>
+                                    <Grid container >
+                                        <Typography textAlign='right' variant='caption' sx={{size:'7px', width:'100%'}}  fontWeight='300' className='white-text' > {e.date + ' - ' + e.time} </Typography>
+                                    </Grid>
+                                    <Grid container>
+                                        <Typography variant='body2' fontWeight='300' className='white-text' > {e.message} </Typography>
+                                    </Grid>
+                                </Grid>:
+                                <Grid container marginX={3} marginY={1} sx={{maxWidth:'60%', minWidth:'10%', borderRadius:'10px'}} paddingX={1} paddingBottom={1} className='white-bg'>
+                                    <Grid container justifyContent='space-between'>
+                                        <Grid item>
+                                            <Typography textAlign='right' variant='caption' sx={{size:'7px', width:'100%'}}  fontWeight='300' className='light-text' > {e.sender} </Typography>
+                                        </Grid>
+                                        <Grid item>
+                                            <Typography textAlign='right' variant='caption' sx={{size:'7px', width:'100%'}}  fontWeight='300' className='text' > {e.date + ' - ' + e.time} </Typography>
+                                        </Grid>
+                                    </Grid>
+                                    <Grid container>
+                                        <Typography variant='body2' fontWeight='300' className='text' > {e.message} </Typography>
+                                    </Grid>
+                                </Grid>)
+                            )}
+
+           
+                        </Grid> : 
+                        <Typography textAlign='center' >Select a user to chat with</Typography>}
+                        <Grid md={6} paddingX={1} container justifyContent='space-between'   marginTop={5} position='fixed' bottom='10px' className='rounded-corners light-grey-bg'>
+                            <Grid item paddingY={1}  >
+                                <IconButton >
+                                    <AddToPhotos/>
+                                </IconButton>
                             </Grid>
-                            <Grid container>
-                                <Typography variant='body2' fontWeight='300' className='white-text' > {e.message} </Typography>
+                            <Grid item paddingTop={1}  md={10}>
+                                <TextField
+                                    variant='standard'
+                                    fullwidth
+                                    placeholder='Type Message'
+                                    size='large'
+                                    sx={{width:'100%', borderBottom:'none'}}
+                                    onChange={()=>setText(event.target.value)}
+                                    InputProps={{ disableUnderline:true }}
+                                />
                             </Grid>
-                        </Grid>:
-                        <Grid container marginX={3} marginY={1} sx={{maxWidth:'60%', minWidth:'10%', borderRadius:'10px'}} paddingX={1} paddingBottom={1} className='white-bg'>
-                            <Grid container justifyContent='space-between'>
-                                <Grid item>
-                                    <Typography textAlign='right' variant='caption' sx={{size:'7px', width:'100%'}}  fontWeight='300' className='light-text' > {e.sender} </Typography>
-                                </Grid>
-                                <Grid item>
-                                    <Typography textAlign='right' variant='caption' sx={{size:'7px', width:'100%'}}  fontWeight='300' className='text' > {e.date + ' - ' + e.time} </Typography>
-                                </Grid>
+                            <Grid item paddingY={1}>
+                                <IconButton onClick={sendMessage}>
+                                <SendRounded/>
+                                </IconButton>
                             </Grid>
-                            <Grid container>
-                                <Typography variant='body2' fontWeight='300' className='text' > {e.message} </Typography>
-                            </Grid>
-                        </Grid>)
-                    )}
+                        </Grid>
+                    </Grid>
+                    
                 </Grid>
             </Grid>
-            <Grid md={10} paddingX={1} container justifyContent='space-between'   marginTop={5} position='fixed' bottom='10px' className='rounded-corners light-grey-bg'>
-                <Grid item paddingY={1}  >
-                    <IconButton >
-                        <AddToPhotos/>
-                    </IconButton>
-                </Grid>
-                <Grid item paddingTop={1}  md={11}>
-                    <TextField
-                        variant='standard'
-                        size='large'
-                        sx={{width:'100%', borderBottom:'none'}}
-                        onChange={()=>setText(event.target.value)}
-                        // InputProps={{ classes }}
-                    />
-                </Grid>
-                <Grid item paddingY={1}>
-                    <IconButton onClick={sendMessage}>
-                    <SendRounded/>
-                    </IconButton>
-                </Grid>
-            </Grid>
+            
         </Grid>
     )
     

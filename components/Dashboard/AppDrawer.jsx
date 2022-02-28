@@ -28,6 +28,7 @@ import News from './News';
 import Gallery from './Gallery';
 import Link from 'next/link'
 import SingleChat from './SingleChat';
+import SingleNews from './SingleNews';
 // import BasicModal from '../popModal';
 
 
@@ -168,6 +169,7 @@ export default function AppDrawer () {
           sx={{
             width: drawerWidth,
             flexShrink: 0,
+            overflow:'hidden',
             '& .MuiDrawer-paper': {
               width: drawerWidth,
               boxSizing: 'border-box',
@@ -223,10 +225,12 @@ export default function AppDrawer () {
               (selected ==2 ? <MemberDirectory/>:
               (selected ==3 ? <Events/>:
               (selected ==4 ? <Chat setSelected={setSelected} />:
-              (selected ==5 ? <News/>: 
-              (selected ==6 ? <News/>: 
+              (selected ==5 ? <News setSelected={setSelected} />: 
+              (selected ==6 ? <News setSelected={setSelected} />: 
               (selected ==7 ? <Gallery/>: 
-              (selected ==9 ? <SingleChat/>: <div>Nothing Here Yet</div>)
+              (selected ==9 ? <SingleChat/>: 
+              (selected ==10 ? <SingleNews />: <div>Nothing Here Yet</div>
+                ))
                 )
                   ))
               ))

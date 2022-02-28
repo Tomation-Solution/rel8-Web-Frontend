@@ -28,7 +28,7 @@ export default function Footer (){
 // Resources
 // Make Payment
 <footer>
-      <Grid sx={{ backgroundColor: "#EFEFEF", padding:'20px'}}>
+      <Grid sx={{ backgroundColor: "#EFEFEF"}} paddingY={7} paddingX={1}>
         <Toolbar variant="dense">
           <Grid container spacing={{ xs: 1, sm: 2, md: 4 }} >
             <Grid item lg={2} xs={12} sm={4} sx={{ textAlign: "left" }}  >

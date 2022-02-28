@@ -4,7 +4,7 @@ import Link from 'next/link'
 import NewImage from '../../images/Vectorlanding.png';
 import ChildNewsCard from "../ChildNewsCard";
 
-export default function News(){
+export default function News(props){
     return(
         <Grid>
             <Grid className='light-green-bg rounded-corners'>
@@ -37,20 +37,23 @@ export default function News(){
                     date='Feb 15th, 2022 - 10:33 '
                     image={NewImage}                
                     title='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sedLorem ipsum dolor sit '
+                    click={()=>props.setSelected(10)}
                 />
 
                 <ChildNewsCard 
                     date='Feb 15th, 2022 - 10:33 '
                     image={NewImage}                
                     title='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sedLorem ipsum dolor sit '
+                    click={()=>props.setSelected(10)}
+
                 />
                 <ChildNewsCard 
                     date='Feb 15th, 2022 - 10:33 '
                     image={NewImage}                
                     title='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sedLorem ipsum dolor sit '
-                />
+                    click={()=>props.setSelected(10)}
 
-                
+                />                
             </Grid>
         </Grid>
     )
