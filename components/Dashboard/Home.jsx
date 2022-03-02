@@ -7,7 +7,7 @@ import Newscard from "../NewsCard";
 import GreenButton from "../Buttonn";
 import { Box } from "@mui/system";
 
-export default function Home(){
+export default function Home(props){
     return(
         <Grid>
             <Grid container md={12} justifyContent='space-around'>
@@ -28,14 +28,14 @@ export default function Home(){
           <br/>
           
           <Grid container md={12} justifyContent='space-around'>
-              <Grid item md={8} className='light-green-bg rounded-corners'>
-                <Grid container md={11}  justifyContent='space-between' marginX={3} marginY={2}>
+              <Grid item md={8} sm={12} sx={12} marginY={2} paddingBottom={2} className='light-green-bg rounded-corners'>
+                <Grid container md={12}  justifyContent='space-between' marginX={3} marginY={2}>
                   <Grid item>
                     <Typography fontWeight='500'  className='text '>
                       Events Dashboard
                     </Typography>
                   </Grid>
-                  <Grid item>
+                  <Grid item xs={6}>
                     <Typography fontWeight='400' className='text light-text'>
                       Aug 23, 2022
                     </Typography>
@@ -55,13 +55,13 @@ export default function Home(){
                 </Grid>
 
               </Grid>
-              <Grid item md={3} className='light-green-bg rounded-corners' paddingY={3} >
+              <Grid item md={3} sm={12} xs={12} className='light-green-bg rounded-corners' paddingY={3} >
                   <Grid container justifyContent='space-evenly'>
                   <Grid item>
                     <AccountBalanceWalletRounded/>
                   </Grid>
                   <Grid item>
-                    <Typography fontWeight='bold' className='text' marginLeft={-5} >50,000</Typography>
+                    <Typography fontWeight='bold' className='text'  >50,000</Typography>
                   </Grid>
                   <Grid container justifyContent='space-around'>
                     <Grid item md={8}>
@@ -83,7 +83,7 @@ export default function Home(){
 
           {/* News */}
 
-        <Grid container>
+        <Grid container justifyContent='space-around'>
           <Grid container justifyContent='space-between' marginY={2} marginX={3} md={8}>
             <Grid item>
               <Typography className='text' fontWeight='500'>Latest AANI News</Typography>
@@ -114,7 +114,7 @@ export default function Home(){
           <Grid item md={3}  >
                   <br/>
               <Typography marginLeft={2} fontWeight='bold' marginBottom={1}>EXCO MEMBERS</Typography>
-              <Grid container justifyContent='space-around' marginLeft={3} className='light-grey-bg rounded-corners' padding={3}>
+              <Grid container justifyContent='space-around'  className='light-grey-bg rounded-corners' padding={3}>
                   <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
                   <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
                   <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
@@ -123,13 +123,16 @@ export default function Home(){
                   <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
                   <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
                   <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
-                  <Box>
-                    <Button style={{margin:'0 auto'}} className='button-lower'>See All</Button>
-                  </Box>
+                  <Grid container>
+                    <Button onClick={()=>props.setSelected(12)} style={{margin:'0 auto', textTransform:'capitalize'}} className='button-lower'>
+                        See All</Button>
+                </Grid>
               </Grid>
+              
           </Grid>
         </Grid>
-        <Typography marginLeft={2}>Upcoming Events</Typography>
+        <br/>
+        <Typography marginLeft={2} className='text' >Upcoming Members Events</Typography>
 
         <Grid container justifyContent='space-between' padding={2} className='rounded-corners light-grey-bg'>
           {/* <br/> */}

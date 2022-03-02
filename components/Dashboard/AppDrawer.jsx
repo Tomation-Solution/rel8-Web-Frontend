@@ -29,6 +29,10 @@ import Gallery from './Gallery';
 import Link from 'next/link'
 import SingleChat from './SingleChat';
 import SingleNews from './SingleNews';
+import Receipt from './Receipt.';
+import { NavLink } from './NavLink';
+import Excos from './Excos';
+import Profile from './Profile';
 // import BasicModal from '../popModal';
 
 
@@ -138,22 +142,32 @@ export default function AppDrawer () {
             >
               <MenuIcon />
             </IconButton>
-            <IconButton>
-              <ArrowBack />
-            </IconButton>
-            <Typography variant="body2" fontWeight='bolder' className='text' noWrap component="div">
-              General Dashboard
-            </Typography>
-            
-            
-                <Avatar className='' />
+            <Grid container justifyContent='space-between'>
+              <Grid item>
+                <Grid container paddingY={2} alignItems='center'>
+                  <IconButton>
+                    <ArrowBack />
+                  </IconButton>
+                  <Typography variant="body2" fontWeight='bolder' className='text' noWrap component="div">
+                    General Dashboard
+                  </Typography>
+                </Grid>
+              </Grid>
               
-                <Settings className='text ' alignItems='right' />
-                <IconButton edge='end'>
-                <Notifications className='text '/>
-                </IconButton>
-              
+              <Grid item md={3}>
+                <Grid container md={8}  justifyContent='space-around' alignItems='center' paddingY={1}>
+                  <IconButton>
+                    <Avatar className='' onClick={()=>setSelected(13)} sx={{bgcolor:'black', height:26, width:26}}   />
+                  </IconButton>
+                  <Settings className='text'  />
+                  <IconButton edge=''>
+                    <Notifications className='text '/>
+                  </IconButton>
+                </Grid>
+              </Grid>
+            </Grid>    
           </Toolbar>
+          
         </AppBar>
         <Drawer
            PaperProps={{
@@ -191,7 +205,7 @@ export default function AppDrawer () {
           <br/>
           <br/>
           <List>
-            {['Home', 'My Account', 'Member Directory', 'Events', 'Chat', 'News & Updates','Insight & Publications',  'Photo Gallery', 'Logout' ].map((text, index) => (
+            {['Home', 'My Account', 'Member Directory', 'Events', 'Chat', 'News & Updates','Insight & Publications',  'Photo Gallery', 'Logout'].map((text, index) => (
               <ListItem onClick={()=>{index !==8 ? setSelected(index):''}} className={index==selected? 'selectedNav':''}   key={text}>
                 <ListItemIcon>
                   {/* {index % 2 === 0 ? <InboxIcon className='drawerIcon'  /> 
@@ -205,6 +219,8 @@ export default function AppDrawer () {
                   <MenuBook className={index==selected? 'selectedNav':'drawerIcon'} />,
                   <Photo className={index==selected? 'selectedNav':'drawerIcon'}/>,
                   <LogoutRounded className={index==selected? 'selectedNav':'drawerIcon'}/>][index]}
+                  {/* <NavLink href="/search" className="nav-item nav-link">Users</NavLink>, */}
+
                 </ListItemIcon>
                 <ListItemText className='iconsText'   primary={<Typography type="body2" className='text nav-link' style={{ color: index==selected?'#365C2A':'white', fontSize:'12px' }}>{text}</Typography>}/>
               </ListItem>
@@ -218,10 +234,8 @@ export default function AppDrawer () {
 
           {
             selected == 0 
-            ? <Home/>:(
-              selected==1 
-              ? <MyAccount/>
-              :
+            ? <Home setSelected={setSelected} />:(
+               selected ==1 ? <MyAccount setSelected={setSelected}/>:
               (selected ==2 ? <MemberDirectory/>:
               (selected ==3 ? <Events/>:
               (selected ==4 ? <Chat setSelected={setSelected} />:
@@ -229,7 +243,13 @@ export default function AppDrawer () {
               (selected ==6 ? <News setSelected={setSelected} />: 
               (selected ==7 ? <Gallery/>: 
               (selected ==9 ? <SingleChat/>: 
-              (selected ==10 ? <SingleNews />: <div>Nothing Here Yet</div>
+              (selected ==10 ? <SingleNews />: 
+              (selected ==11 ? <Receipt />: 
+              (selected ==12 ? <Excos setSelected={setSelected} />: 
+              (selected ==13 ? <Profile setSelected={setSelected} />: <div>Nothing Yet</div>
+                  )
+                  )
+                  )
                 ))
                 )
                   ))

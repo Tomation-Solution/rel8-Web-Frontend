@@ -7,7 +7,7 @@ import GreenButton from "./Buttonn";
 export default function Newscard (props){
     return(
         <Grid md={5} item marginY={2}>
-            <Image src={props.image} marginTop={2} height='600px' className='rounded-corners'/>
+            <Image src={props.image} marginTop={0} height='600px' className='rounded-corners'/>
             <Typography fontWeight='bold' marginY={1}>{props.title}</Typography>
             <Typography marginBottom={2}>{props.body}</Typography>
             <Grid md={10} sm={9} style={{margin:'0 auto'}}>

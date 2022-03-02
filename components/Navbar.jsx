@@ -19,7 +19,7 @@ export default function Navbar(){
     const open = Boolean(anchorEl);
     const openResource = Boolean(anchorElR);
     const [openTop, setOpenTop]= useState(false)
-    const [width, setWidth] = useState(0);
+    const [width, setWidth] = useState(768);
 
 
     const handleWindowSizeChange = () => {
