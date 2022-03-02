@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Grid, Typography } from "@mui/material";
+import { Divider, Grid, Typography } from "@mui/material";
 import EventCard from "../EventCard";
 import BannerImage from '../../images/Vectorlanding.png'
 import Newscard from "../NewsCard";
@@ -15,8 +15,8 @@ export default function Events(){
     return(
         <Grid>
             <Grid container justifyContent='space-around'>
-                <Grid md={7} className='light-green-bg rounded-corners'style={{maxHeight:'15vh'}} item>
-                    <Grid container paddingY={4}  justifyContent='space-around'>
+                <Grid container md={7}  item>
+                    <Grid container paddingY={4} alignItems='center'  justifyContent='space-around' className='light-green-bg rounded-corners'style={{maxHeight:'12vh'}}>
                         <Grid item>
                             <Typography fontWeight='bold' className='text' textAlign='center'>
                                 18
@@ -24,6 +24,9 @@ export default function Events(){
                             <Typography fontWeight='400' className='text' variant='subtitle2'>
                                 National Events
                             </Typography>
+                        </Grid>
+                        {/* <Divider orientation='horizontal' /> */}
+                        <Grid item className='dark-green-bg' sx={{width:'0.1px', height:'35px' }}>  
                         </Grid>
 
                         <Grid item>
@@ -34,7 +37,8 @@ export default function Events(){
                                 State Events
                             </Typography>
                         </Grid>
-
+                        <Grid item className='dark-green-bg' sx={{width:'0.1px', height:'35px' }}>  
+                        </Grid>
                         <Grid item>
                             <Typography fontWeight='bold' className='text' textAlign='center'>
                                 18
@@ -44,8 +48,10 @@ export default function Events(){
                             </Typography>
                         </Grid>
                     </Grid>
+                    <Grid>fdfd</Grid>
+                   
                     {/* <Grid container> fhkfhdk</Grid> */}
-                </Grid>
+                </Grid> 
                 <Grid md={4}  padding={2} item>
                     <Calendar 
                     onChange={onChange}  

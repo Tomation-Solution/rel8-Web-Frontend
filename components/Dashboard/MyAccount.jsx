@@ -4,7 +4,7 @@ import { Grid, Table, TableRow,TableHead, TableBody, TableCell, Typography } fro
 import IconCard from "../IconCard";
 import GreenButton from "../Buttonn";
 
-export default function MyAccount(){
+export default function MyAccount(props){
     return(
         <Grid>
             <Image src={BannerImage}/>
@@ -57,7 +57,7 @@ export default function MyAccount(){
                                 <TableCell className='light-text'>11-12-2022</TableCell>
                                 <TableCell className='light-text'>
                                     <GreenButton marginX={2} text='Reciept' bg='#436937' radius='10px' 
-                                    paddingY={1} paddingX={1} textColor='white'/>
+                                    paddingY={1} paddingX={1} textColor='white' click={()=>props.setSelected(11) }/>
                                 </TableCell>
                                 {/* <TableCell className='light-text'>Financial Advisor</TableCell>
                                 <TableCell className='light-text'>Financial Advisory</TableCell>
