@@ -18,7 +18,9 @@ import styles from '../../styles/Home.module.css'
 import Image from 'next/image';
 import Logo from "../../images/ANNI-Logo1 1.png"
 import { AccountBalanceWalletRounded, DashboardRounded, Logout, ArrowBack,
-  LogoutRounded, Modal,Person, Dialog, DialogActions , DialogContent, DialogContentText , DialogTitle , PeopleRounded, ChatBubble, Info, MenuBook, Photo, Settings, Notifications } from '@mui/icons-material';
+  LogoutRounded, Modal,Person, Dialog, DialogActions , DialogContent, 
+  DialogContentText , DialogTitle , PeopleRounded, ChatBubble, Info, 
+  MenuBook, Photo, Settings, Notifications } from '@mui/icons-material';
 import Home from './Home';
 import MyAccount from './MyAccount';
 import MemberDirectory from './MemberDirectory';

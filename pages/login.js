@@ -29,23 +29,26 @@ export default function Login (){
 
                 <Grid>
                     
-                    <TextField placeholder='Username' label='Username'  
+                    <TextField 
+                    placeholder=' Username' 
+                    label='Username'  
                     style={{width:'100%'}} size='small'
                     InputProps={{
                         startAdornment:(
-                            <Person color='disabled' marginRight={6}  fontSize='13'/>
+                            <Person color='disabled'  fontSize='13'/>
                         )
                     }}
                     />
                 </Grid>
-                <br/>
-                <Grid >
+                {/* <br/> */}
+                <Grid container marginY={2}>
                     <TextField 
-                    placeholder='Password'
+                    placeholder=' Password'
                     label='Password'
                     size='small'
                     type= {showPassword ? 'password' : 'text'}
                     style={{width:'100%'}}
+                    InputLabelProps={{ shrink: true,  }}
                     InputProps={{
                         endAdornment: (
                         <IconButton
