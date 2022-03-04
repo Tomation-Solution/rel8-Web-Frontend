@@ -165,30 +165,29 @@ export default function Navbar(){
                                     Events
                                 </Typography>
                         </Link>
-                        {/* <Link href='' onClick={handleClickResource} >
-                            <> */}
-                                <Typography id="demo-positioned-menu" onClick={handleClickResource }  className='text nav-link' variant="body2" component="div" sx={{ flexGrow: 1 }}>
-                                    <Grid container>   
-                                        Resources
-                                    <ArrowDropDown />
-                                    </Grid>
-                                </Typography>
-                                <Menu
-                                id="basic-menu"
-                                anchorEl={anchorElR}
-                                open={openResource}
-                                onClose={handleCloseResource}
-                                MenuListProps={{
-                                'aria-labelledby': 'basic-button',
-                                }}
-                                >
-                                <MenuItem onClick={handleClose}>Articles</MenuItem>
-                                <MenuItem onClick={handleClose}>Research Papers</MenuItem>
-                                <MenuItem onClick={handleClose}>Constitution</MenuItem>
-                                <MenuItem onClick={handleClose}>Newsletter</MenuItem>
-                                {/* </> */}
-                                
-                            </Menu>
+                       
+                            <Typography id="demo-positioned-menu" onClick={handleClickResource }  className='text nav-link' variant="body2" component="div" sx={{ flexGrow: 1 }}>
+                                <Grid container>   
+                                    Resources
+                                <ArrowDropDown />
+                                </Grid>
+                            </Typography>
+                            <Menu
+                            id="basic-menu"
+                            anchorEl={anchorElR}
+                            open={openResource}
+                            onClose={handleCloseResource}
+                            MenuListProps={{
+                            'aria-labelledby': 'basic-button',
+                            }}
+                            >
+                            <MenuItem onClick={handleClose}>Articles</MenuItem>
+                            <MenuItem onClick={handleClose}>Research Papers</MenuItem>
+                            <MenuItem onClick={handleClose}>Constitution</MenuItem>
+                            <MenuItem onClick={handleClose}>Newsletter</MenuItem>
+                            {/* </> */}
+                            
+                        </Menu>
                                 
                             {/* </>
                         </Link> */}

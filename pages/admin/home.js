@@ -1,17 +1,32 @@
 import { useState } from "react";
 import { PeopleRounded, EventAvailable, PersonPinRounded, 
-    AccountBalanceWalletRounded, AddCircleOutlineOutlined} from "@mui/icons-material";
+    AccountBalanceWalletRounded, AddCircleOutlineOutlined, Delete, Edit} from "@mui/icons-material";
 import { Button, Grid, Tabs, Tab, Box, Typography } from "@mui/material";
 import { DashboardLayout } from "../../components/Dashboard/Admin/Sidebar/dashboard-layout"; 
 import StatCard from "../../components/Dashboard/Admin/StatCard";
 import PropTypes  from "prop-types";
+import {CustomizedTables, MemberTable} from "../../components/Dashboard/Admin/Tables";
 
 
 export default function Home(){
 
     const [value, setValue] = useState(0);
+    const excoFields = ['Name', 'PortFolio', 'Email', 'Phone','Course of study', 'Period of study']
+    const memberFields = ['Name','Email', 'Phone','Address', 'Occupation','Course of study', 'Period of study','Actions']
 
-    const handleChange = (event, newValue) => {
+    function createData(name, email, phone, address, occupation,course, period, action) {
+        return { name, email, phone, address, occupation,course, period, action };
+      }
+      
+      const rows = [
+        createData('Ade Johnson', 'ade@gmail.com', '08089348232','123, Ikorodu road, Onipanu ', 'Project Manger', 'Project Management', '2010 - 2022',<Grid container justifyContent='space-between' > <Edit sx={{color:'#365C2A'}}/> <Delete sx={{color:'red'}}/> </Grid> ),
+        createData('Ade Johnson', 'ade@gmail.com', '08089348232','123, Ikorodu road, Onipanu ', 'Project Manger', 'Project Management', '2010 - 2022', <Grid container> <Edit sx={{color:'#365C2A'}}/> <Delete sx={{color:'red'}}/> </Grid>),
+        createData('Ade Johnson', 'ade@gmail.com', '08089348232','123, Ikorodu road, Onipanu ', 'Project Manger', 'Project Management', '2010 - 2022', <Grid container> <Edit sx={{color:'#365C2A'}}/> <Delete sx={{color:'red'}}/> </Grid>),
+        
+      ];
+      
+
+     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
     function TabPanel(props) {
@@ -121,7 +136,8 @@ export default function Home(){
                     </Grid>
                    
                 </Grid>
-
+            
+                
                 <Tabs
                     value={value}
                     onChange={handleChange}
@@ -132,10 +148,12 @@ export default function Home(){
                     <Tab value="four" label="Sub-Commitee Members" className='text' sx={{textTransform:'capitalize'}} /> */}
                 </Tabs>
                 <TabPanel value={value} index={0}>
-                    Item One
+                    {/* <CustomizedTables tableHead={excoFields} rows={rows}/> */}
+                    <MemberTable tableHead={memberFields} rows={rows}/>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                    Item Two
+                <CustomizedTables tableHead={excoFields} rows={rows}/>
+
                 </TabPanel>
             </Grid>
             

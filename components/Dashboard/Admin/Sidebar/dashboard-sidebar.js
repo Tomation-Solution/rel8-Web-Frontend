@@ -17,7 +17,7 @@ const items = [
     title: 'Dashboard'
   },
   {
-    href: '/search',
+    href: '/admin/members',
     icon: (<PeopleRounded fontSize="small" />),
     title: 'Members'
   },
@@ -34,12 +34,13 @@ const items = [
   {
     href: '/settings',
     icon: (<AccountBalanceWalletRounded fontSize="small" />),
-    title: 'Due'
+    title: 'Dues'
   },
+  
   {
     href: '/login',
     icon: (<Info fontSize="small" />),
-    title: 'News'
+    title: 'News/ Publications'
   },
   {
     href: '/Logout',
