@@ -107,11 +107,11 @@ export default function Navbar(){
                                 <MenuItem onClick={handleClose}>Constitution</MenuItem>
                                 <MenuItem onClick={handleClose}>Newsletter</MenuItem>     
                             </Menu>
-                 
-                            <Typography textAlign='center' onClick={handleClick}   className='text nav-link' variant="body2" component="div" sx={{ flexGrow: 1 }}>
+                                
+                            <Typography textAlign='center' onClick={handleClick}   className='text nav-link' variant="body2" component="div" sx={{ flexGrow: 1}}>
                                 <Grid  justifyContent='center'  container>
-                                Meet Our People
-                                <ArrowDropDown />
+                                    Meet Our People
+                                    <ArrowDropDown />
                                 </Grid>
                               </Typography>
                               
@@ -121,7 +121,7 @@ export default function Navbar(){
                                 open={open}
                                 onClose={handleClose}
                                 MenuListProps={{
-                                'aria-labelledby': 'basic-button',
+                                'aria-labelledby': 'basic-button'
                                 }}
                                 >
                                 <Link href="search">

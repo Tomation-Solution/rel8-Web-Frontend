@@ -64,11 +64,17 @@ export default function Profile (props){
 
                     <Typography marginTop={2} className='light-text'>Period of Study:</Typography>
                     <Typography className='text' fontWeight='' variant='subtitle2'>2018 - 2019</Typography>
+                    
+
+                    <Typography marginTop={2} className='light-text'>Exco Position:</Typography>
+                    <Typography className='text' fontWeight='' variant='subtitle2'>Chairman</Typography>
+
+                    <Typography marginTop={2} className='light-text'>Tenure Ends:</Typography>
+                    <Typography className='text' fontWeight='' variant='subtitle2'>May 15, 2022</Typography>
 
                 </Grid>
                 
             </Grid>
-
         </Grid>
     )
 }

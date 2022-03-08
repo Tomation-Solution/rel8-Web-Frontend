@@ -16,12 +16,12 @@ export default function Home(props){
                textColor='white' paddingY={1} paddingX={1} bg='#436937'/>
             </Grid>
             <Grid item md={3} sm={10}>
-              <GreenButton text='Commitee Dashboard' radius='10px'
+              <GreenButton text='Committee Dashboard' radius='10px'
                 textColor='white' paddingY={1} paddingX={1} bg='#436937'
               />
             </Grid>
             <Grid item md={3} sm={10}>
-            <GreenButton text='Sub-Commitee Dashboard' radius='10px'
+            <GreenButton text='Sub-Committee Dashboard' radius='10px'
                textColor='white' paddingY={1} paddingX={1} bg='#436937'/>
             </Grid>
           </Grid>

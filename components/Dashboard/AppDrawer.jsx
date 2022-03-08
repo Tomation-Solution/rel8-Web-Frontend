@@ -48,6 +48,12 @@ const darkGreen ='//#region 436937'
 //   }
 // }
 
+export function dropDown(){
+  return(
+    <h1>Hello</h1>
+  )
+}
+
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
@@ -207,7 +213,7 @@ export default function AppDrawer () {
           <br/>
           <br/>
           <List>
-            {['Home', 'My Account', 'Member Directory', 'Events', 'Chat', 'News & Updates','Insight & Publications',  'Photo Gallery', 'Logout'].map((text, index) => (
+            {['Home', 'My Account', 'Member Directory', 'Events', 'Chat', 'News & Updates','Resources',  'Gallery', 'Logout'].map((text, index) => (
               <ListItem onClick={()=>{index !==8 ? setSelected(index):''}} className={index==selected? 'selectedNav':''}   key={text}>
                 <ListItemIcon>
                   {/* {index % 2 === 0 ? <InboxIcon className='drawerIcon'  /> 

@@ -6,7 +6,7 @@ import { Box, Button, Divider, Drawer, Typography, useMediaQuery } from '@mui/ma
 import { useTheme } from '@mui/material/styles';
 import { NavItem } from './nav-item';
 import { Person, DashboardCustomize, PeopleRounded, PersonPinRounded, 
-  SettingsSuggest, AccountBalanceWalletRounded, Info, LogoutRounded  } from '@mui/icons-material';
+  SettingsSuggest, AccountBalanceWalletRounded, Info, LogoutRounded, EventRounded  } from '@mui/icons-material';
 import Image from 'next/image';
 import LogoImage from '../../../../images/ANNI-Logo1 1.png'
 
@@ -21,31 +21,46 @@ const items = [
     icon: (<PeopleRounded fontSize="small" />),
     title: 'Members'
   },
+
   {
-    href: '/products',
-    icon: (<PersonPinRounded fontSize="small" />),
-    title: 'Excos'
+    href: '/admin/events',
+    icon: (<EventRounded fontSize="small" />),
+    title: 'Events'
   },
+  // {
+  //   href: '/products',
+  //   icon: (<PersonPinRounded fontSize="small" />),
+  //   title: 'Excos'
+  // },
+  // {
+  //   href: '/account',
+  //   icon: (<SettingsSuggest fontSize="small" />),
+  //   title: 'Committee'
+  // },
   {
-    href: '/account',
-    icon: (<SettingsSuggest fontSize="small" />),
-    title: 'Commitee'
-  },
-  {
-    href: '/settings',
+    href: '/admin/dues',
     icon: (<AccountBalanceWalletRounded fontSize="small" />),
     title: 'Dues'
   },
   
+  // {
+  //   href: '/login',
+  //   icon: (<Info fontSize="small" />),
+  //   title: 'News/ Publications'
+  // },
+
   {
-    href: '/login',
+
+    href: '#',
+    isDroppable:true,
     icon: (<Info fontSize="small" />),
-    title: 'News/ Publications'
+    title: 'Resources'
   },
+
   {
     href: '/Logout',
     icon: (<LogoutRounded fontSize="small" />),
-    title: 'Register'
+    title: 'Logout'
   }
 ];
 
@@ -160,6 +175,7 @@ export const DashboardSidebar = (props) => {
       variant="temporary"
     >
       {content}
+      
     </Drawer>
   );
 };
