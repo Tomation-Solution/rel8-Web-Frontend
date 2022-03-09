@@ -2,36 +2,32 @@ import { useState } from "react";
 import { Delete, Edit, SearchRounded, AddCircleOutlineOutlined} from "@mui/icons-material";
 import { TextField, Grid, Button, Tabs, Tab, Box, Typography } from "@mui/material";
 import { DashboardLayout } from "../../components/Dashboard/Admin/Sidebar/dashboard-layout"; 
-// import StatCard from "../../components/Dashboard/Admin/StatCard";
 import PropTypes  from "prop-types";
-import {CustomizedTables, MemberTable} from "../../components/Dashboard/Admin/Tables";
+import {ArchiveTable, CustomizedTables, MemberTable} from "../../components/Dashboard/Admin/Tables";
 import BasicModal from "../../components/Modals";
 import HeadText from "../../components/Dashboard/DashboardHead";
 import AddPorfolio from "../../components/Modal.jsx/AddPortfolio";
 import EditMembers from "../../components/Modal.jsx/EditMembers";
 import DeleteMembers from "../../components/Modal.jsx/DeleteMembers";
-import GreenButton from "../../components/Buttonn";
 
 
 export default function Archive(){
 
     const [value, setValue] = useState(0);
-    const [subcomm, setSubcom] = useState('');
-    const excoFields = ['Name', 'PortFolio', 'Email', 'Phone','Course of study', 'Period of study']
-    const memberFields = ['Name','Email', 'Phone','Address', 'Occupation','Course of study', 'Period of study','Actions']
+    const memberFields = ['S/N','Name','Email', 'Phone','Address', 'Occupation','Course of study', 'Period of study','Actions']
 
-    function createData(name, email, phone, address, occupation,course, period, action) {
-        return { name, email, phone, address, occupation,course, period, action };
+    function createData(sn,name, email, phone, address, occupation,course, period, action) {
+        return {sn, name, email, phone, address, occupation,course, period, action };
       }
       
       const rows = [
-        createData('Ade Johnson', 'ade@gmail.com', '08089348232','123, Ikorodu road, Onipanu ', 'Project Manger', 'Project Management', '2010 - 2022',<Grid container justifyContent='space-between' > <Delete onClick={()=>setOpenDeleteMember(true)} sx={{color:'red'}}/> </Grid> ),
-        createData('Ade Johnson', 'ade@gmail.com', '08089348232','123, Ikorodu road, Onipanu ', 'Project Manger', 'Project Management', '2010 - 2022', <Grid container justifyContent='space-between'> <Delete sx={{color:'red'}}/> </Grid>),
-        createData('Ade Johnson', 'ade@gmail.com', '08089348232','123, Ikorodu road, Onipanu ', 'Project Manger', 'Project Management', '2010 - 2022', <Grid container justifyContent='space-between'> <Delete onClick={()=>alert(rows.name)} sx={{color:'red'}}/> </Grid>),
-        createData('Ade Johnson', 'ade@gmail.com', '08089348232','123, Ikorodu road, Onipanu ', 'Project Manger', 'Project Management', '2010 - 2022', <Grid container justifyContent='space-between'> <Delete sx={{color:'red'}}/> </Grid>),
-        createData('Ade Johnson', 'ade@gmail.com', '08089348232','123, Ikorodu road, Onipanu ', 'Project Manger', 'Project Management', '2010 - 2022', <Grid container justifyContent='space-between'> <Delete sx={{color:'red'}}/> </Grid>),
-        createData('Ade Johnson', 'ade@gmail.com', '08089348232','123, Ikorodu road, Onipanu ', 'Project Manger', 'Project Management', '2010 - 2022', <Grid container justifyContent='space-between'> <Delete sx={{color:'red'}}/> </Grid>),
-        createData('Ade Johnson', 'ade@gmail.com', '08089348232','123, Ikorodu road, Onipanu ', 'Project Manger', 'Project Management', '2010 - 2022', <Grid container justifyContent='space-between'> <Delete sx={{color:'red'}}/> </Grid>),
+        createData(1,'Ade Johnson', 'ade@gmail.com', '08089348232','123, Ikorodu road, Onipanu ', 'Project Manger', 'Project Management', '2010 - 2022',<Grid container justifyContent='space-between' > <Delete onClick={()=>setOpenDeleteMember(true)} sx={{color:'red'}}/> </Grid> ),
+        createData(2,'Ade Johnson', 'ade@gmail.com', '08089348232','123, Ikorodu road, Onipanu ', 'Project Manger', 'Project Management', '2010 - 2022', <Grid container justifyContent='space-between'> <Delete sx={{color:'red'}}/> </Grid>),
+        createData(3,'Ade Johnson', 'ade@gmail.com', '08089348232','123, Ikorodu road, Onipanu ', 'Project Manger', 'Project Management', '2010 - 2022', <Grid container justifyContent='space-between'> <Delete onClick={()=>alert(rows.name)} sx={{color:'red'}}/> </Grid>),
+        createData(4,'Ade Johnson', 'ade@gmail.com', '08089348232','123, Ikorodu road, Onipanu ', 'Project Manger', 'Project Management', '2010 - 2022', <Grid container justifyContent='space-between'> <Delete sx={{color:'red'}}/> </Grid>),
+        createData(5,'Ade Johnson', 'ade@gmail.com', '08089348232','123, Ikorodu road, Onipanu ', 'Project Manger', 'Project Management', '2010 - 2022', <Grid container justifyContent='space-between'> <Delete sx={{color:'red'}}/> </Grid>),
+        createData(6,'Ade Johnson', 'ade@gmail.com', '08089348232','123, Ikorodu road, Onipanu ', 'Project Manger', 'Project Management', '2010 - 2022', <Grid container justifyContent='space-between'> <Delete sx={{color:'red'}}/> </Grid>),
+        createData(7,'Ade Johnson', 'ade@gmail.com', '08089348232','123, Ikorodu road, Onipanu ', 'Project Manger', 'Project Management', '2010 - 2022', <Grid container justifyContent='space-between'> <Delete sx={{color:'red'}}/> </Grid>),
         
       ];
       
@@ -102,34 +98,8 @@ export default function Archive(){
                         <Grid item alignContent='center' sx={{borderRadius:'5px'}} py={1} px={2} mx={1} className='dark-green-bg'>
                             <SearchRounded sx={{color:'#fff',paddingTop:1}} />
                         </Grid>
-                        {/* <Grid item alignContent='center' sx={{borderRadius:'5px'}} py={1} px={2} mx={1} className='dark-green-bg'>
-                            <Typography className='white-text'  textAlign='center' sx={{color:'white'}}>Add New</Typography>
-                        </Grid> */}
-
-                        {/* <GreenButton 
-                        text='Add New'
-                        bg='#365C2A'
-                        radius={5}
-                        textColor='white'
-                        paddingX={5}
-                        paddingY={1.5}
-                        fontWeight={500}
-                        />
-
-                        <GreenButton 
-                        text='Batch Upload'
-                        bg='#365C2A'
-                        radius={5}
-                        textColor='white'
-                        paddingX={5}
-                        paddingY={1.5}
-                        fontWeight={500}
-                        /> */}
-                        {/* <Grid item alignContent='center' sx={{borderRadius:'5px'}} py={1} px={2} mx={1} className='dark-green-bg'>
-                            <Typography className='white-text'  textAlign='center' sx={{color:'white'}}>upload Multiple</Typography>
-                        </Grid> */}
-                    </Grid><br/>
-                    <MemberTable tableHead={memberFields} rows={rows}/>
+                        </Grid><br/>
+                    <ArchiveTable tableHead={memberFields} rows={rows}/>
                 </Grid>
             
         </DashboardLayout>

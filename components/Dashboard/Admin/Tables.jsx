@@ -307,3 +307,66 @@ export function AllEventTable(props) {
   );
 }
 // sn, name, date, category, type, action
+
+export function ArchiveTable(props) {
+  return (
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+        <TableHead>
+          <TableRow>
+            {props.tableHead ? props.tableHead.map((e)=><StyledTableCell>{e}</StyledTableCell>):''}
+          </TableRow>
+        </TableHead>
+        <TableBody className='text'>
+          {props.rows.map((row) => (
+            <StyledTableRow key={row.name}>
+              <StyledTableCell className='light-text' component="th" scope="row">
+                {row.sn}
+              </StyledTableCell>
+              {/* <StyledTableCell className='light-text' >{row.post}</StyledTableCell> */}
+              <StyledTableCell className='light-text' >{row.name}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.email}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.phone}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.address}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.occupation}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.course}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.period}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.action}</StyledTableCell>
+            </StyledTableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+}
+
+
+export function NewsTable(props) {
+  return (
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+        <TableHead>
+          <TableRow>
+            {props.tableHead ? props.tableHead.map((e)=><StyledTableCell>{e}</StyledTableCell>):''}
+          </TableRow>
+        </TableHead>
+        <TableBody className='text'>
+          {props.rows.map((row) => (
+            <StyledTableRow key={row.name}>
+              <StyledTableCell className='light-text' component="th" scope="row">
+                {row.sn}
+              </StyledTableCell>
+              {/* <StyledTableCell className='light-text' >{row.post}</StyledTableCell> */}
+              <StyledTableCell className='light-text' >{row.title}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.content}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.date}</StyledTableCell>
+              {/* <StyledTableCell className='light-text' >{row.address}</StyledTableCell> */}
+              <StyledTableCell className='light-text' >{row.Reader}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.action}</StyledTableCell>
+            </StyledTableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+}

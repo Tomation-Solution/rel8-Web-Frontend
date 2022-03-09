@@ -110,8 +110,8 @@ export default function EditMembers(props){
             </Grid> */}
 
             <Grid md={12} mt={1} container justifyContent='space-around'>
-                <GreenButton text='Save' textColor='#fff' paddingY={1} radius={3} paddingX={15} bg='#203719' paddingX={7} />
-                <GreenButton text='Cancel' textColor='#203719' paddingY={1} radius={3} paddingX={15} bg='#E1F1DC' paddingX={7} click={()=>props.handleClose()} />
+                <GreenButton text='Save' textColor='#fff' paddingY={1} radius={3} bg='#203719' paddingX={7} />
+                <GreenButton text='Cancel' textColor='#203719' bg='#E1F1DC' paddingY={1} paddingX={7} click={()=>props.handleClose()} />
             </Grid>
         </Grid>
     )

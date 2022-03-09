@@ -69,33 +69,71 @@ export default function Events(){
                 </Grid>
             </Grid>
 
-            <Typography fontWeight='bold' marginTop={4} marginLeft={2} className='text' variant='subtitle2'>
+            {/* <Typography fontWeight='bold' marginTop={4} marginLeft={2} className='text' variant='subtitle2'>
                                 National Events
-                            </Typography>
+                            </Typography> */}
 
-            <Grid container justifyContent='space-around'>
+            <Grid container md={12}  justifyContent='space-around'>
                 {/* <Grid md={3}> */}
+                <Grid item md={4} >
+                    <Typography fontWeight='bold' marginTop={4} marginLeft={2} className='text' variant='subtitle2'>
+                        National Events
+                    </Typography>
+                    <EventPageCard
+                        header='National Events'
+                        date='Feb 15th, 2022 - 10:33 '
+                        body='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed'
+                        image={BannerImage}
+                        btnText='Register to Attend'
+                    />
+                </Grid>
+
+                <Grid item md={4}>
+                    <Typography fontWeight='bold' marginTop={4} marginLeft={2} className='text' variant='subtitle2'>
+                        State Events
+                    </Typography>
                 <EventPageCard
+                    header='State Events'
                     date='Feb 15th, 2022 - 10:33 '
                     body='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed'
                     image={BannerImage}
                     btnText='Register to Attend'
-                />
-
-                <EventPageCard
-                    date='Feb 15th, 2022 - 10:33 '
-                    body='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed'
-                    image={BannerImage}
-                    btnText='Register to Attend'
 
                 />
+                </Grid>
+                <Grid item md={4}>
+                    <Typography fontWeight='bold' marginTop={4} marginLeft={2} className='text' variant='subtitle2'>
+                        Member Events
+                    </Typography>
+                    {/* <Grid container> */}
+                    <EventPageCard
+                        header='Member Events'
+                        date='Feb 15th, 2022 - 10:33 '
+                        body='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed'
+                        image={BannerImage}
+                        btnText='Join'
+                    />
+                    {/* </Grid> */}
+                    {/* <Grid container> */}
+                    <EventPageCard
+                        header='Member Events'
+                        date='Feb 15th, 2022 - 10:33 '
+                        body='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed'
+                        image={BannerImage}
+                        btnText='Join'
+                    />
+                    {/* </Grid> */}
 
-                <EventPageCard
-                    date='Feb 15th, 2022 - 10:33 '
-                    body='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed'
-                    image={BannerImage}
-                    btnText='Join'
-                />
+                    {/* <Grid container> */}
+                    <EventPageCard
+                        header='Member Events'
+                        date='Feb 15th, 2022 - 10:33 '
+                        body='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed'
+                        image={BannerImage}
+                        btnText='Join'
+                    />
+                    {/* </Grid> */}
+                </Grid>
                 {/* </Grid> */}
             </Grid>
         </Grid>

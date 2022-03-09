@@ -7,6 +7,8 @@ import { Box, Button, ListItem, ListItemButton, ListItemText,
   import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
+import BasicModal from '../../../Modals';
+import Logout from '../../../Modal.jsx/Logout';
 
 
 export const NavItem = (props) => {
@@ -14,6 +16,10 @@ export const NavItem = (props) => {
   const router = useRouter();
   const active = href ? (router.pathname === href) : false;
   const [open, setOpen] = useState(true);
+  const [openLogout, setOpenLogout] = useState(false);
+
+  const handleClose =()=> setOpenLogout(false);
+
 
   const handleClick = () => {
     setOpen(!open);
@@ -34,6 +40,7 @@ export const NavItem = (props) => {
       // onClick={isDroppable? ()=>alert('yeah'):''}
       {...others}
     >
+      <BasicModal handleClose={handleClose} open={openLogout} body={<Logout handleClose={handleClose} />}/>
       {title!='Resources' ?
       <NextLink
         href={href}
@@ -43,6 +50,7 @@ export const NavItem = (props) => {
           component="a"
           startIcon={icon}
           disableRipple
+          onClick={()=>title=='Logout'? setOpenLogout(true):''}
           sx={{
             backgroundColor: active && '#E1F1DC',
             borderRadius: 1,

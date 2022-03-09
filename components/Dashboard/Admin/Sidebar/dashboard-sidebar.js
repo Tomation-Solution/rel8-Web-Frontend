@@ -58,7 +58,7 @@ const items = [
   },
 
   {
-    href: '/Logout',
+    href: '#',
     icon: (<LogoutRounded fontSize="small" />),
     title: 'Logout'
   }

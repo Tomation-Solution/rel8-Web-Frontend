@@ -188,7 +188,7 @@ export default function Events(){
                         <Grid item alignContent='center' sx={{borderRadius:'5px'}} py={1} px={2} mx={1} className='dark-green-bg'>
                             <SearchRounded sx={{color:'#fff',paddingTop:1}} />
                         </Grid>
-                        <GreenButton 
+                        {/* <GreenButton 
                         text='Create Profolio'
                         bg='#365C2A'
                         radius={5}
@@ -196,7 +196,7 @@ export default function Events(){
                         paddingX={5}
                         paddingY={1.5}
                         fontWeight={500}
-                        />
+                        /> */}
                     </Grid><br/>
                     <NationalEventTable tableHead={nationalEventFields} rows={nationalRows}/>
                 </TabPanel>
@@ -217,19 +217,7 @@ export default function Events(){
                         <Grid item alignContent='center' sx={{borderRadius:'5px'}} py={1} px={2} mx={1} className='dark-green-bg'>
                             <SearchRounded sx={{color:'#fff',paddingTop:1}} />
                         </Grid>
-                        {/* <Grid item alignContent='center' sx={{borderRadius:'5px'}} py={1} px={2} mx={1} className='dark-green-bg'>
-                            <Typography className='white-text'  textAlign='center' sx={{color:'red'}}>Add New</Typography>
-                        </Grid> */}
-
-                        {/* <GreenButton 
-                        text='Create Porfolio'
-                        bg='#365C2A'
-                        radius={5}
-                        textColor='white'
-                        paddingX={5}
-                        paddingY={1.5}
-                        fontWeight={500}
-                        /> */}
+                       
                     </Grid><br/>
                     <StateEventTable tableHead={eventFields} rows={stateRows}/>
                 </TabPanel>
@@ -249,19 +237,7 @@ export default function Events(){
                         <Grid item alignContent='center' sx={{borderRadius:'5px'}} py={1} px={2} mx={1} className='dark-green-bg'>
                             <SearchRounded sx={{color:'#fff',paddingTop:1}} />
                         </Grid>
-                        {/* <Grid item alignContent='center' sx={{borderRadius:'5px'}} py={1} px={2} mx={1} className='dark-green-bg'>
-                            <Typography className='white-text'  textAlign='center' sx={{color:'red'}}>Add New</Typography>
-                        </Grid> */}
 
-                        {/* <GreenButton 
-                        text='Create Porfolio'
-                        bg='#365C2A'
-                        radius={5}
-                        textColor='white'
-                        paddingX={5}
-                        paddingY={1.5}
-                        fontWeight={500}
-                        /> */}
                     </Grid><br/>
                     <MemberEventTable tableHead={eventFields} rows={memberRows}/>
                 </TabPanel>
