@@ -31,9 +31,10 @@ export default function Login (){
                     
                     <TextField 
                     placeholder=' Username' 
-                    label='Username'  
+                    // label='Username'  
                     style={{width:'100%'}} size='small'
                     InputProps={{
+                    
                         startAdornment:(
                             <Person color='disabled'  fontSize='13'/>
                         )
@@ -44,7 +45,7 @@ export default function Login (){
                 <Grid container marginY={2}>
                     <TextField 
                     placeholder=' Password'
-                    label='Password'
+                    // label='Password'
                     size='small'
                     type= {showPassword ? 'password' : 'text'}
                     style={{width:'100%'}}

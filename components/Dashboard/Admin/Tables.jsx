@@ -87,13 +87,6 @@ export function MemberTable(props) {
         <TableHead>
           <TableRow>
             {props.tableHead ? props.tableHead.map((e)=><StyledTableCell>{e}</StyledTableCell>):''}
-            {/* <StyledTableCell >Name</StyledTableCell> */}
-            {/* <StyledTableCell align="right">Portfolio</StyledTableCell>
-            <StyledTableCell align="right">Email&nbsp;</StyledTableCell>
-            <StyledTableCell align="right">Phone&nbsp;</StyledTableCell>
-            <StyledTableCell align="right">Course of study&nbsp;</StyledTableCell>
-            <StyledTableCell align="right">Period of study&nbsp;</StyledTableCell>
-            <StyledTableCell align="center">Action</StyledTableCell> */}
           </TableRow>
         </TableHead>
         <TableBody className='text'>
@@ -117,3 +110,200 @@ export function MemberTable(props) {
     </TableContainer>
   );
 }
+
+
+export function DuesTable(props) {
+  return (
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+        <TableHead>
+          <TableRow>
+            {props.tableHead ? props.tableHead.map((e)=><StyledTableCell>{e}</StyledTableCell>):''}
+            {/* <StyledTableCell >Name</StyledTableCell> */}
+            {/* <StyledTableCell align="right">Portfolio</StyledTableCell>
+            <StyledTableCell align="right">Email&nbsp;</StyledTableCell>
+            <StyledTableCell align="right">Phone&nbsp;</StyledTableCell>
+            <StyledTableCell align="right">Course of study&nbsp;</StyledTableCell>
+            <StyledTableCell align="right">Period of study&nbsp;</StyledTableCell>
+            <StyledTableCell align="center">Action</StyledTableCell> */}
+          </TableRow>
+        </TableHead>
+        <TableBody className='text'>
+          {props.rows.map((row) => (
+            <StyledTableRow key={row.name}>
+              <StyledTableCell className='light-text' component="th" scope="row">
+                {row.sn}
+              </StyledTableCell>
+              {/* <StyledTableCell className='light-text' >{row.post}</StyledTableCell> */}
+              <StyledTableCell className='light-text' >{row.name}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.amount}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.category}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.action}</StyledTableCell>
+            </StyledTableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+}
+
+
+
+export function OwingTable(props) {
+  return (
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+        <TableHead>
+          <TableRow>
+            {props.tableHead ? props.tableHead.map((e)=><StyledTableCell>{e}</StyledTableCell>):''}
+            {/* <StyledTableCell >Name</StyledTableCell> */}
+            {/* <StyledTableCell align="right">Portfolio</StyledTableCell>
+            <StyledTableCell align="right">Email&nbsp;</StyledTableCell>
+            <StyledTableCell align="right">Phone&nbsp;</StyledTableCell>
+            <StyledTableCell align="right">Course of study&nbsp;</StyledTableCell>
+            <StyledTableCell align="right">Period of study&nbsp;</StyledTableCell>
+            <StyledTableCell align="center">Action</StyledTableCell> */}
+          </TableRow>
+        </TableHead>
+        <TableBody className='text'>
+          {props.rows.map((row) => (
+            <StyledTableRow key={row.name}>
+              <StyledTableCell className='light-text' component="th" scope="row">
+                {row.sn}
+              </StyledTableCell>
+              {/* <StyledTableCell className='light-text' >{row.post}</StyledTableCell> */}
+              <StyledTableCell className='light-text' >{row.name}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.email}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.phone}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.course}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.amount}</StyledTableCell>
+            </StyledTableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+}
+
+
+export function NationalEventTable(props) {
+  return (
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+        <TableHead>
+          <TableRow>
+            {props.tableHead ? props.tableHead.map((e)=><StyledTableCell>{e}</StyledTableCell>):''}
+          </TableRow>
+        </TableHead>
+        <TableBody className='text'>
+          {props.rows.map((row) => (
+            <StyledTableRow key={row.name}>
+              <StyledTableCell className='light-text' component="th" scope="row">
+                {row.sn}
+              </StyledTableCell>
+              {/* <StyledTableCell className='light-text' >{row.post}</StyledTableCell> */}
+              <StyledTableCell className='light-text' >{row.name}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.date}</StyledTableCell>
+              {/* <StyledTableCell className='light-text' >{row.category}</StyledTableCell> */}
+              <StyledTableCell className='light-text' >{row.type}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.address}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.action}</StyledTableCell>
+            </StyledTableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+}
+
+
+export function MemberEventTable(props) {
+  return (
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+        <TableHead>
+          <TableRow>
+            {props.tableHead ? props.tableHead.map((e)=><StyledTableCell>{e}</StyledTableCell>):''}
+          </TableRow>
+        </TableHead>
+        <TableBody className='text'>
+          {props.rows.map((row) => (
+            <StyledTableRow key={row.name}>
+              <StyledTableCell className='light-text' component="th" scope="row">
+                {row.sn}
+              </StyledTableCell>
+              {/* <StyledTableCell className='light-text' >{row.post}</StyledTableCell> */}
+              <StyledTableCell className='light-text' >{row.name}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.date}</StyledTableCell>
+              {/* <StyledTableCell className='light-text' >{row.category}</StyledTableCell> */}
+              <StyledTableCell className='light-text' >{row.type}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.address}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.action}</StyledTableCell>
+            </StyledTableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+}
+
+export function StateEventTable(props) {
+  return (
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+        <TableHead>
+          <TableRow>
+            {props.tableHead ? props.tableHead.map((e)=><StyledTableCell>{e}</StyledTableCell>):''}
+          </TableRow>
+        </TableHead>
+        <TableBody className='text'>
+          {props.rows.map((row) => (
+            <StyledTableRow key={row.name}>
+              <StyledTableCell className='light-text' component="th" scope="row">
+                {row.sn}
+              </StyledTableCell>
+              {/* <StyledTableCell className='light-text' >{row.post}</StyledTableCell> */}
+              <StyledTableCell className='light-text' >{row.name}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.date}</StyledTableCell>
+              {/* <StyledTableCell className='light-text' >{row.category}</StyledTableCell> */}
+              <StyledTableCell className='light-text' >{row.type}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.address}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.action}</StyledTableCell>
+            </StyledTableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+}
+
+export function AllEventTable(props) {
+  return (
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+        <TableHead>
+          <TableRow>
+            {props.tableHead ? props.tableHead.map((e)=><StyledTableCell>{e}</StyledTableCell>):''}
+          </TableRow>
+        </TableHead>
+        <TableBody className='text'>
+          {props.rows.map((row) => (
+            <StyledTableRow key={row.name}>
+              <StyledTableCell className='light-text' component="th" scope="row">
+                {row.sn}
+              </StyledTableCell>
+              {/* <StyledTableCell className='light-text' >{row.post}</StyledTableCell> */}
+              <StyledTableCell className='light-text' >{row.name}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.date}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.category}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.type}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.address}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.action}</StyledTableCell>
+            </StyledTableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+}
+// sn, name, date, category, type, action

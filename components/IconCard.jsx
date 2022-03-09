@@ -1,5 +1,5 @@
 // import React from 'react'
-import { MoneyOffRounded } from '@mui/icons-material';
+import { AccountBalanceWalletTwoTone, MoneyOffRounded } from '@mui/icons-material';
 import {Avatar, Grid, Typography} from '@mui/material';
 
 function IconCard() {
@@ -7,12 +7,12 @@ function IconCard() {
     <Grid container className='light-grey-bg rounded-corners' justifyContent='space-evenly' paddingX={2} paddingY={3} md={3}>
         <Grid item>
             <Avatar  sx={{ bgcolor: '#FFC5B2' }}>
-            <MoneyOffRounded sx={{color:'#FF3B6F'}}/>
+            <AccountBalanceWalletTwoTone sx={{color:'#FF3B6F'}}/>
         </Avatar>
         </Grid>
         <Grid item>
             <Typography fontWeight='bold' className='text'>
-                26,000
+                26,000.00
             </Typography>
             <Typography>
                 Outstanding

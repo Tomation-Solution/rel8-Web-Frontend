@@ -125,7 +125,7 @@ export default function Home(){
                             header='30' 
                             icon={<AccountBalanceWalletRounded sx={{color:'#F53B00', fontSize:'35'}} fontSize='large' />}
                             iconBg='#FFD7B2'
-                            body='Total Income'
+                            body='Total Outstanding'
                             color='#FFEBD9'
                         />
                         <br/>

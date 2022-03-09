@@ -7,107 +7,16 @@ import GreenButton from "../Buttonn";
 
 
 export default function DeleteMembers(props){
-    const [anchorEl, setAnchorEl] = useState(null);
-    const [anchorEl1, setAnchorEl1] = useState(null);
-    const open = Boolean(anchorEl);
-    const open1 = Boolean(anchorEl1);
-
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
-
-    const handleClose1 = () => {
-        setAnchorEl1(null);
-        // alert(val)
-    };
-
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-
-    const handleClick1 = (event) => {
-        setAnchorEl1(event.currentTarget);
-    };
-
+    
     return (
         <Grid container >
-            <HeadText text='Edit Members'/>
-            <TextField
-                variant='standard'
-                label="Name"
-                fullWidth
-                InputLabelProps={{className:'light-text'}}
-            />
-
-            <TextField
-                variant='standard'
-                label="Email"
-                fullWidth
-                InputLabelProps={{className:'light-text'}}
-            />
-
-            <TextField
-                variant='standard'
-                label="Phone"
-                fullWidth
-                InputLabelProps={{className:'light-text'}}
-            />
-
-            <TextField
-                variant='standard'
-                label="Address"
-                fullWidth
-                InputLabelProps={{className:'light-text'}}
-            />
-
-            <TextField
-                variant='standard'
-                label="Occupation"
-                fullWidth
-                InputLabelProps={{className:'light-text'}}
-            />
-
-            <TextField
-                variant='standard'
-                label="Course of Study"
-                fullWidth
-                InputLabelProps={{className:'light-text'}}
-                value={props.body}
-            />
-
-            <TextField
-                variant='standard'
-                label="Period of Study"
-                fullWidth
-                InputLabelProps={{className:'light-text'}}
-            />
-            {/* <Grid my={2} py={1} container sx={{borderRadius:1}} className='light-grey-bg'>
-            <Typography textAlign='center' id="demo-positioned-menu" onClick={handleClick1 }  className='light-text nav-link' variant="body2" component="div" sx={{ flexGrow: 1 }}>
-                <Grid container px={1} alignItems='center' justifyContent='space-between' >Select Category<ArrowDropDown />
-                </Grid>
+            {/* <HeadText text='Confirm Delete'/> */}
+            <Typography fontWeight='bolder' variant='h6' pb={2} sx={{margin:'0 auto'}} className='text'>Confirm Delete</Typography>
+            <Typography py={2} variant='body2' textAlign='center' className='text'>
+                Confirm you wish to Delete
+                user from the database
             </Typography>
-            <Menu id="basic-menu" sx={{width:'100%'}} anchorEl={anchorEl1} open={open1} onClose={handleClose1}
-                MenuListProps={{'aria-labelledby': 'basic-button',}}>
-                <MenuItem onClick={handleClose1}>Commitee</MenuItem>
-                <MenuItem onClick={handleClose1}>Exco</MenuItem>
-                <MenuItem onClick={handleClose1}>Sub Commitee</MenuItem>
-               
-            </Menu>
-            </Grid>
-
-            <Grid  py={1} container sx={{borderRadius:1}} className='light-grey-bg'>
-            <Typography textAlign='center' id="demo-positioned-menu" onClick={handleClick }  className='light-text nav-link' variant="body2" component="div" sx={{ flexGrow: 1 }}>
-                <Grid container px={1} alignItems='center' justifyContent='space-between' >Select Porfolio<ArrowDropDown />
-                </Grid>
-            </Typography>
-            <Menu id="basic-menu" sx={{width:'100%'}} anchorEl={anchorEl} open={open} onClose={handleClose}
-                MenuListProps={{'aria-labelledby': 'basic-button',}}>
-                <MenuItem onClick={handleClose}>Chairman</MenuItem>
-                <MenuItem onClick={handleClose}>Vice Chairman</MenuItem>
-                <MenuItem onClick={handleClose}>Treasurer</MenuItem>
-               
-            </Menu>
-            </Grid> */}
+            
 
             <Grid md={12} mt={1} container justifyContent='space-around'>
                 <GreenButton text='Save' textColor='#fff' paddingY={1} radius={3} paddingX={15} bg='#203719' paddingX={7} />
