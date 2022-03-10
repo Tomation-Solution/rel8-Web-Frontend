@@ -40,7 +40,7 @@ export default function Home(props){
                       Events Dashboard
                     </Typography>
                   </Grid>
-                  <Grid item xs={6}>
+                  <Grid item xs={2}>
                     <Typography fontWeight='400' className='text light-text'>
                       Aug 23, 2022
                     </Typography>
@@ -48,7 +48,7 @@ export default function Home(props){
                 </Grid>
 
                 <Grid>
-                  <Typography fontWeight='300' marginX={3} className='text '>
+                  <Typography variant='body2' fontWeight='300' marginX={3} className='text '>
                     Alumni Thanksgiving Day 2022   -    Feb., 2 2022
                   </Typography>
                 </Grid>
@@ -120,17 +120,20 @@ export default function Home(props){
                   <br/>
               <Typography marginLeft={2} fontWeight='bold' marginBottom={1}>EXCO MEMBERS</Typography>
               <Grid container justifyContent='space-around'  className='light-grey-bg rounded-corners' padding={3}>
-                  <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
-                  <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
-                  <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
-                  <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
-                  <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
-                  <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
-                  <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
-                  <Typography  className='text' fontWeight='300'  marginY={1}>Hon. Babalola John</Typography>
-                  <Grid container>
+              <Typography variant='body2'  className='text' fontWeight='400'  marginY={1}>Hon. Babalola John</Typography>
+              <Typography variant='body2'  className='text' fontWeight='400'  marginY={1}>Hon. Babalola John</Typography>
+              <Typography variant='body2'  className='text' fontWeight='400'  marginY={1}>Hon. Babalola John</Typography>
+              <Typography variant='body2'  className='text' fontWeight='400'  marginY={1}>Hon. Babalola John</Typography>
+              <Typography variant='body2'  className='text' fontWeight='400'  marginY={1}>Hon. Babalola John</Typography>
+              <Typography variant='body2'  className='text' fontWeight='400'  marginY={1}>Hon. Babalola John</Typography>
+                 
+                  <Grid container justifyContent='center'>
                     {/* <Button onClick={()=>props.setSelected(12)} style={{margin:'0 auto', textTransform:'capitalize'}} className='button-lower'> */}
-                       <Link href='/excos'>See All</Link> 
+                        <Link href='/excos'>
+                           <Typography textAlign='center' className='nav-link text'>
+                               See All
+                           </Typography>    
+                        </Link> 
                         {/* </Button> */}
                 </Grid>
               </Grid>
