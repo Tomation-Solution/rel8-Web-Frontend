@@ -103,7 +103,7 @@ export default function Navbar(){
                         </Link>
         
                         <Typography textAlign='center' id="demo-positioned-menu" onClick={handleClickResource }  className='text nav-link' variant="body2" component="div" sx={{ flexGrow: 1 }}>
-                            <Grid container  justifyContent='center'>   
+                            <Grid className='text' container  justifyContent='center'>   
                                 Resources
                             <ArrowDropDown />
                             </Grid>
@@ -125,7 +125,7 @@ export default function Navbar(){
                             </Menu>
                                 
                             <Typography textAlign='center' onClick={handleClick}   className='text nav-link' variant="body2" component="div" sx={{ flexGrow: 1}}>
-                                <Grid  justifyContent='center'  container>
+                                <Grid className='text' justifyContent='center'  container>
                                     Meet Our People
                                     <ArrowDropDown />
                                 </Grid>
