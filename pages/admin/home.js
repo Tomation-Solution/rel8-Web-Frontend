@@ -6,13 +6,17 @@ import { DashboardLayout } from "../../components/Dashboard/Admin/Sidebar/dashbo
 import StatCard from "../../components/Dashboard/Admin/StatCard";
 import PropTypes  from "prop-types";
 import {CustomizedTables, MemberTable} from "../../components/Dashboard/Admin/Tables";
-
+import { useSelector } from "react-redux";
+import { selectUser } from "../../redux/slices/userSlice";
 
 export default function Home(){
-
+    
     const [value, setValue] = useState(0);
     const excoFields = ['Name', 'PortFolio', 'Email', 'Phone','Course of study', 'Period of study']
     const memberFields = ['Name','Email', 'Phone','Address', 'Occupation','Course of study', 'Period of study','Actions']
+    const user = useSelector(selectUser);
+
+    // console.log(user)
 
     function createData(name, email, phone, address, occupation,course, period, action) {
         return { name, email, phone, address, occupation,course, period, action };
