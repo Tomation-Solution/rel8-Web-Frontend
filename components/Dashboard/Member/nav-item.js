@@ -7,8 +7,8 @@ import { Box, Button, ListItem, ListItemButton, ListItemText,
   import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
-import BasicModal from '../../../Modals';
-import Logout from '../../../Modal.jsx/Logout';
+import BasicModal from '../../Modals';
+import Logout from '../../Modal.jsx/Logout';
 
 
 export const NavItem = (props) => {
@@ -109,45 +109,40 @@ export const NavItem = (props) => {
           </Box>
         </Button>
       <Collapse in={open} timeout="auto" unmountOnExit>
-      <NextLink href='/admin/news' passHref>
+      <NextLink href='/members/excos' passHref>
         <Button
             component="a"
             // startIcon={icon}
             disableRipple
-            sx={{ backgroundColor: router.pathname=='/admin/news' && '#E1F1DC', borderRadius: 1,
-              color: router.pathname=='/admin/news' ? '#2B4A21' : 'white',
-              fontWeight: '300',
-              fontSize:13,
+            sx={{ backgroundColor: router.pathname=='/members/excos' && '#E1F1DC', borderRadius: 1,
+              color: router.pathname=='/members/excos' ? '#2B4A21' : 'white',
+              fontWeight: '300', fontSize:13,
               justifyContent: 'flex-start',
-              px: 3,
-              ml:5,
-              py:0.5,
-              textAlign: 'left',
-              textTransform: 'none',
+              px: 3, ml:5, py:0.5,
+              textAlign: 'left', textTransform: 'none',
               width: '100%',
               '& .MuiButton-startIcon': {
                 color: active ? '#2B4A21' : 'neutral.400'
               },
-              '&:hover': {
-                backgroundColor: 'rgba(255,255,255, 0.08)'
+              '&:hover': { backgroundColor: 'rgba(255,255,255, 0.08)'
               }
             }}
           >
             <Box sx={{ flexGrow: 1 }}>
-              AANI News
+              Excos
             </Box>
           </Button>
         </NextLink>
 
 
-        <NextLink href='/admin/archive' passHref>
+        <NextLink href='/members/publications' passHref>
           <Button
             component="a"
             // startIcon={icon}
             disableRipple
             sx={{
-              backgroundColor: router.pathname=='/admin/archive' && '#E1F1DC', borderRadius: 1,
-              color: router.pathname=='/admin/archive' ? '#2B4A21' : 'white', fontWeight: '300',
+              backgroundColor: router.pathname=='/members/publications' && '#E1F1DC', borderRadius: 1,
+              color: router.pathname=='/members/publications' ? '#2B4A21' : 'white', fontWeight: '300',
               fontSize:13, justifyContent: 'flex-start', px: 3, ml:5,
               py:0.5, textAlign: 'left', textTransform: 'none', width: '100%',
               '& .MuiButton-startIcon': { color: active ? '#2B4A21' : 'neutral.400'
@@ -156,7 +151,7 @@ export const NavItem = (props) => {
             }}
           >
             <Box sx={{ flexGrow: 1 }}>
-              Archive
+              Publications
             </Box>
           </Button>
         </NextLink>

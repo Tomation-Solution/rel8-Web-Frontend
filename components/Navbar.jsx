@@ -6,10 +6,22 @@ import Logo from '../images/ANNI-Logo1 1.png'
 import {useState, useEffect} from 'react'
 import Popover from '@mui/material/Popover';
 import Menu from '@mui/material/Menu';
+// import {useSty}
 import MenuItem from '@mui/material/MenuItem';
 // import Button from '@mui/material/Button';
 import PopupState, { bindTrigger, bindPopover } from 'material-ui-popup-state';
 import { ArrowDropDown, MenuRounded } from '@mui/icons-material';
+import { style } from '@mui/system';
+import { useTheme, makeStyles } from '@mui/styles';
+
+
+export const useStyles = makeStyles({
+    menu: {
+        "& .MuiPaper-root": {
+          backgroundColor: "lightblue"
+        }
+      }
+  });
 
 export default function Navbar(){
 
@@ -52,7 +64,9 @@ export default function Navbar(){
         setAnchorEl(null);
     };
 
-
+    // const Theme = useTheme();
+   
+      const classes = useStyles();
    return( 
    <AppBar className={styles.appbar}  style={{backgroundColor:'#fff', boxShadow:'none'}}>
        <Grid container sx={{width:'100%'}}  justifyContent='space-between'>
@@ -123,6 +137,8 @@ export default function Navbar(){
                                 MenuListProps={{
                                 'aria-labelledby': 'basic-button'
                                 }}
+                                className={classes.menu}
+                                xs={{backgroundColor:'red'}}
                                 >
                                 <Link href="search">
                                     <MenuItem onClick={handleClose}>Members</MenuItem>

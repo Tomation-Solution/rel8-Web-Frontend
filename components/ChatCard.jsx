@@ -17,7 +17,7 @@ export default function ChatCard(props){
                         {props.name}
                     </Typography>
                     <Typography variant='subtitle2' className='light-text' fontWeight='normal'>
-                        {props.message.lenght<28 ? props.message : props.message.substring(0,25) +' ...'}
+                        {props.message.lenght<28 ? props.message : props.message.substring(0,23) +' ...'}
                     </Typography>
                 </Grid>
             </Grid>

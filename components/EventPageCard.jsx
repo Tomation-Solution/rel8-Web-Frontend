@@ -17,7 +17,7 @@ export default function EventPageCard (props){
     };
 
     return(
-        <Grid md={3} item marginY={2}>
+        <Grid  item md={11} marginY={2}>
             <Modal
                 open={open}
                 onClose={handleClose}
@@ -25,6 +25,7 @@ export default function EventPageCard (props){
                 aria-describedby="parent-modal-description"
                 // justifyContent='center'
             >
+                {/* <Ty   pography>{props.header}</Typography> */}
                 <Grid container justifyContent='center' alignContent='center'   >
                     <Grid sx={{width: 400, margin:'0 auto' }} paddingX={3} paddingY={4}  position='absolute' top='40%' className='light-green-bg rounded-corners'>
                         <Typography textAlign='center' className='text' variant='h5' fontWeight='600' id="parent-modal-title">

@@ -4,57 +4,57 @@ import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import { Box, Button, Divider, Drawer, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { NavItem } from './nav-item';
+import { NavItem } from '../nav-item';
 import { Person, DashboardCustomize, PeopleRounded, PersonPinRounded, 
-  SettingsSuggest, AccountBalanceWalletRounded, Info, LogoutRounded, EventRounded  } from '@mui/icons-material';
+  SettingsSuggest, AccountBalanceWalletRounded, Info, LogoutRounded, EventRounded, ChatBubble, Photo, MenuBook  } from '@mui/icons-material';
 import Image from 'next/image';
 import LogoImage from '../../../../images/ANNI-Logo1 1.png'
 
 const items = [
   {
-    href: '/admin/home',
+    href: '/members/home',
     icon: (<DashboardCustomize fontSize="small" />),
     title: 'Dashboard'
   },
   {
-    href: '/admin/members',
-    icon: (<PeopleRounded fontSize="small" />),
-    title: 'Members'
+    href: '/members/account',
+    icon: (<AccountBalanceWalletRounded fontSize="small" />),
+    title: 'My Account'
   },
 
   {
-    href: '/admin/events',
-    icon: (<EventRounded fontSize="small" />),
+    href: '/members/directory',
+    icon: (<Person fontSize="small" />),
+    title: 'Member Directory'
+  },
+  {
+    href: '/members/events',
+    icon: (<PeopleRounded fontSize="small" />),
     title: 'Events'
   },
-  // {
-  //   href: '/products',
-  //   icon: (<PersonPinRounded fontSize="small" />),
-  //   title: 'Excos'
-  // },
-  // {
-  //   href: '/account',
-  //   icon: (<SettingsSuggest fontSize="small" />),
-  //   title: 'Committee'
-  // },
-  {
-    href: '/admin/dues',
-    icon: (<AccountBalanceWalletRounded fontSize="small" />),
-    title: 'Dues'
-  },
-  
-  // {
-  //   href: '/login',
-  //   icon: (<Info fontSize="small" />),
-  //   title: 'News/ Publications'
-  // },
 
+  {
+    href: '/members/chat',
+    icon: (<ChatBubble fontSize="small" />),
+    title: 'Chat'
+  },
+  {
+    href: '/members/news',
+    icon: (<Info fontSize="small" />),
+    title: 'AANI News'
+  },
   {
 
     href: '#',
     isDroppable:true,
-    icon: (<Info fontSize="small" />),
+    icon: (<MenuBook fontSize="small" />),
     title: 'Resources'
+  },
+
+  {
+    href: '/members/gallery',
+    icon: (<Photo fontSize="small" />),
+    title: 'Gallery'
   },
 
   {

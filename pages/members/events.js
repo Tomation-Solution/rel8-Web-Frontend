@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { Divider, Grid, Typography } from "@mui/material";
-import EventCard from "../EventCard";
 import BannerImage from '../../images/Vectorlanding.png'
-import Newscard from "../NewsCard";
-import EventPageCard from "../EventPageCard";
+import EventPageCard from "../../components/EventPageCard";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
+import { DashboardLayout } from "../../components/Dashboard/Member/Sidebar/dashboard-layout";
 
 
 export default function Events(){
@@ -13,6 +12,7 @@ export default function Events(){
     console.log(value)
 
     return(
+        <DashboardLayout>
         <Grid>
             <Grid container justifyContent='space-around'>
                 <Grid container md={7}  item>
@@ -73,7 +73,7 @@ export default function Events(){
                                 National Events
                             </Typography> */}
 
-            <Grid container md={12}  justifyContent='space-around'>
+            <Grid mx={1} container md={12}  justifyContent='space-around'>
                 {/* <Grid md={3}> */}
                 <Grid item md={4} >
                     <Typography fontWeight='bold' marginTop={4} marginLeft={2} className='text' variant='subtitle2'>
@@ -137,5 +137,6 @@ export default function Events(){
                 {/* </Grid> */}
             </Grid>
         </Grid>
+        </DashboardLayout>
     )
 }
