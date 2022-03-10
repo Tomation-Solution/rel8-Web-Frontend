@@ -15,12 +15,13 @@ import { style } from '@mui/system';
 import { useTheme, makeStyles } from '@mui/styles';
 
 
-export const useStyles = makeStyles({
-    menu: {
-        "& .MuiPaper-root": {
-          backgroundColor: "lightblue"
-        }
-      }
+const useStyles = makeStyles({
+    root: {
+      background: 'rgba(255, 255, 255, 0.8)',
+      boxShadow:'none',
+      paddingX:2
+    },
+   
   });
 
 export default function Navbar(){
@@ -102,7 +103,7 @@ export default function Navbar(){
                         </Link>
         
                         <Typography textAlign='center' id="demo-positioned-menu" onClick={handleClickResource }  className='text nav-link' variant="body2" component="div" sx={{ flexGrow: 1 }}>
-                            <Grid container  justifyContent='center'>   
+                            <Grid className='text' container  justifyContent='center'>   
                                 Resources
                             <ArrowDropDown />
                             </Grid>
@@ -115,6 +116,7 @@ export default function Navbar(){
                                 MenuListProps={{
                                 'aria-labelledby': 'basic-button',
                                 }}
+                                classes={{ paper: classes.menuPaper }}
                             >
                                 <MenuItem onClick={handleClose}>Articles</MenuItem>
                                 <MenuItem onClick={handleClose}>Research Papers</MenuItem>
@@ -123,7 +125,7 @@ export default function Navbar(){
                             </Menu>
                                 
                             <Typography textAlign='center' onClick={handleClick}   className='text nav-link' variant="body2" component="div" sx={{ flexGrow: 1}}>
-                                <Grid  justifyContent='center'  container>
+                                <Grid className='text' justifyContent='center'  container>
                                     Meet Our People
                                     <ArrowDropDown />
                                 </Grid>
@@ -137,8 +139,8 @@ export default function Navbar(){
                                 MenuListProps={{
                                 'aria-labelledby': 'basic-button'
                                 }}
-                                className={classes.menu}
                                 xs={{backgroundColor:'red'}}
+                                className={classes.root}
                                 >
                                 <Link href="search">
                                     <MenuItem onClick={handleClose}>Members</MenuItem>
@@ -196,6 +198,8 @@ export default function Navbar(){
                             MenuListProps={{
                             'aria-labelledby': 'basic-button',
                             }}
+                            // className={classes.root}
+                            classes={{ paper: classes.root }}
                             >
                             <MenuItem onClick={handleClose}>Articles</MenuItem>
                             <MenuItem onClick={handleClose}>Research Papers</MenuItem>
@@ -226,6 +230,8 @@ export default function Navbar(){
                                 MenuListProps={{
                                 'aria-labelledby': 'basic-button',
                                 }}
+                                classes={{ paper: classes.root }}
+                                
                                 >
                                 <Link href="search">
                                     <MenuItem onClick={handleClose}>Members</MenuItem>
