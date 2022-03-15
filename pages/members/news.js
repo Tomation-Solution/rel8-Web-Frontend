@@ -22,7 +22,7 @@ export default function News(props){
                     <Typography fontWeight='500' variant="subtitle2">
                         dsdsdsdsdsds dsddsd dsdsdsdsdsdd dsdsdss dssdsdsds sdsdssds
                     </Typography>
-                    <Typography fontWeight='300' variant='subtitle2'>
+                    <Typography fontWeight='300' textAlign='justify' variant='subtitle2'>
                         ssdsdsdsdsds dsddsd dsdsdsdsdsdd dsdsdss dssdsdsds sdsdssdsdsdsdsdsdsds dsddsd dsdsdsdsdsdd dsdsdss dssdsdsds sdsdssdsdsdsdsdsdsds dsddsd 
                         dsdsdsdsdsdd dsdsdss dssdsdsds sdsdssds dsdsdsdsdsdd dsdsdss dssdsdsds sdsdssdsdsdsdsdsdsdd dsdsdss dssdsdsds sdsdssds...
                         <Typography paddingLeft={2} className='text' fontWeight='600' variant='caption'><Link href='/members/single-news'><div className='nav-link'>Read More</div></Link></Typography> 

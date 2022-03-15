@@ -19,6 +19,7 @@ export default function MapHolder (){
                 <Grid item md={8}>
                     {/* <div id="map"></div> */}
                     <Image src={Map} height='400vh'/>
+                    {/* <div dangerouslySetInnerHTML={{ __html: "<iframe src='http://simplemaps.com/custom/country/48SMs9Lu' />"}} /> */}
                 </Grid>
                 
             </Grid>

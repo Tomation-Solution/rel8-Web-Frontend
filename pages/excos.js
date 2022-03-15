@@ -16,6 +16,7 @@ export default function Excos(){
                     image={ImageCard} 
                     name='MD Abubakar' 
                     post='MD/CEO' 
+                    excoPost="Chairman"
                     company='Blaid Group' 
                     body='Lorem ipsum dolor sit amet, 
                     consetetur sadipscing elitr, sed 
@@ -27,6 +28,7 @@ export default function Excos(){
                     image={ImageCard} 
                     name='MD Abubakar' 
                     post='MD/CEO' 
+                    excoPost="Vice Chairman"
                     company='Blaid Group' 
                     body='Lorem ipsum dolor sit amet, 
                     consetetur sadipscing elitr, sed 
@@ -38,6 +40,7 @@ export default function Excos(){
                     image={ImageCard} 
                     name='MD Abubakar' 
                     post='MD/CEO' 
+                    excoPost="Secretary"
                     company='Blaid Group' 
                     body='Lorem ipsum dolor sit amet, 
                     consetetur sadipscing elitr, sed 

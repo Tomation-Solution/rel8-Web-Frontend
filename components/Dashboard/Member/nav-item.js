@@ -109,13 +109,13 @@ export const NavItem = (props) => {
           </Box>
         </Button>
       <Collapse in={open} timeout="auto" unmountOnExit>
-      <NextLink href='/members/excos' passHref>
+      <NextLink href='/excos' passHref>
         <Button
             component="a"
             // startIcon={icon}
             disableRipple
-            sx={{ backgroundColor: router.pathname=='/members/excos' && '#E1F1DC', borderRadius: 1,
-              color: router.pathname=='/members/excos' ? '#2B4A21' : 'white',
+            sx={{ backgroundColor: router.pathname=='/excos' && '#E1F1DC', borderRadius: 1,
+              color: router.pathname=='/excos' ? '#2B4A21' : 'white',
               fontWeight: '300', fontSize:13,
               justifyContent: 'flex-start',
               px: 3, ml:5, py:0.5,

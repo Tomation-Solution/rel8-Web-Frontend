@@ -153,6 +153,6 @@ a {
   .chat-bg::-webkit-scrollbar-thumb:hover {
     background: #436937; 
   }
-
+  #map { height: '100px'; width:'100%'; z-index:9000 }
    /*scrollbar for chat ends here*/
 /* } */

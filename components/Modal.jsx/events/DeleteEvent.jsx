@@ -1,12 +1,9 @@
-import { useState } from "react";
-import BasicModal from "../Modals";
-import { ArrowDropDown } from "@mui/icons-material";
-import { Grid, TextField, Menu, MenuItem, Typography } from "@mui/material";
-import HeadText from "../Dashboard/DashboardHead";
-import GreenButton from "../Buttonn";
+
+import { Grid, Typography } from "@mui/material";
+import GreenButton from "../../Buttonn";
 
 
-export default function DeleteMembers(props){
+export default function DeleteEvent(props){
     
     return (
         <Grid container >
@@ -14,7 +11,12 @@ export default function DeleteMembers(props){
             <Typography fontWeight='bolder' variant='h6' pb={2} sx={{margin:'0 auto'}} className='text'>Confirm Delete</Typography>
             <Typography py={2} variant='body2' textAlign='center' className='text'>
                 Confirm you wish to Delete
-                user from the database
+                events from the database
+                
+            </Typography>
+
+            <Typography py={2} mx={1} variant='caption' xs={{margin:'0 auto'}} textAlign='center' className='light-text'>
+               Note: You can't retriieve deleted items
             </Typography>
             
 
