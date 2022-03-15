@@ -8,6 +8,10 @@ import PropTypes  from "prop-types";
 import GreenButton from "../../components/Buttonn";
 import {CustomizedTables, DuesTable, OwingTable} from "../../components/Dashboard/Admin/Tables";
 import HeadText from "../../components/Dashboard/DashboardHead";
+import AddDue from "../../components/Modal.jsx/Dues/AddDue";
+import BasicModal from "../../components/Modals";
+import EditDue from "../../components/Modal.jsx/Dues/EditDue";
+import DeleteDue from "../../components/Modal.jsx/Dues/DeleteDue";
 
 
 export default function Dues(){
@@ -26,7 +30,7 @@ export default function Dues(){
       
 
       const rows = [
-        createData('1', 'Annual fee', '52,500.00','General',<Grid container  > <IconButton> <Edit sx={{color:'#365C2A'}}/> </IconButton> <IconButton><Delete sx={{color:'red'}}/> </IconButton> </Grid> ),
+        createData('1', 'Annual fee', '52,500.00','General',<Grid container  > <IconButton onClick={()=>setOpenEdit(true)}> <Edit sx={{color:'#365C2A'}}/> </IconButton> <IconButton onClick={()=>setOpenDelete(true)}><Delete sx={{color:'red'}}/> </IconButton> </Grid> ),
         createData('2', 'Annual fee', '52,500.00','General',<Grid container  > <IconButton> <Edit sx={{color:'#365C2A'}}/> </IconButton> <IconButton><Delete sx={{color:'red'}}/> </IconButton> </Grid> ),
         createData('3', 'Annual fee', '52,500.00','General',<Grid container  > <IconButton> <Edit sx={{color:'#365C2A'}}/> </IconButton> <IconButton><Delete sx={{color:'red'}}/> </IconButton> </Grid> ),
         createData('4', 'Annual fee', '52,500.00','General',<Grid container  > <IconButton> <Edit sx={{color:'#365C2A'}}/> </IconButton> <IconButton><Delete sx={{color:'red'}}/> </IconButton> </Grid> ),
@@ -45,9 +49,20 @@ export default function Dues(){
      const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+    const [open, setOpen] = useState(false)
+        // const [open, setOpen] = useState(false);
+      const [openEdit, setOpenEdit] = useState(false);
+      const [openDelete, setOpenDelete] = useState(false);
+      const handleOpen = () => setOpen(true);
+      const handleOpenDelete = () => setOpenDelete(true);
+      const handleClose = () => setOpen(false);
+      const handleClose1 = () => setOpenEdit(false);
+      const handleCloseDelete = () => setOpenDelete(false);
+
     function TabPanel(props) {
         const { children, value, index, ...other } = props;
       
+    
         return (
           <div
             role="tabpanel"
@@ -79,6 +94,10 @@ export default function Dues(){
       }
     return (
         <DashboardLayout>
+            <BasicModal handleClose={handleClose} open={open} body={<AddDue handleClose={handleClose} />}/>
+            <BasicModal handleClose={handleClose1} open={openEdit} body={<EditDue handleClose={handleClose1} />}/>
+            <BasicModal handleClose={handleCloseDelete} open={openDelete} body={<DeleteDue handleClose={handleCloseDelete} />}/>
+            
             <Grid>
                 <Grid container justifyContent='space-around'>
                     <Grid item md={12}>
@@ -154,6 +173,7 @@ export default function Dues(){
                         paddingX={5}
                         paddingY={1.5}
                         fontWeight={500}
+                        click={()=>setOpen(true)}
                         />
                         
                     </Grid><br/>

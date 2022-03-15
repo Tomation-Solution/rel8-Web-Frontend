@@ -8,11 +8,8 @@ import {CustomizedTables, MemberTable} from "../../components/Dashboard/Admin/Ta
 import BasicModal from "../../components/Modals";
 import HeadText from "../../components/Dashboard/DashboardHead";
 import AddPorfolio from "../../components/Modal.jsx/Members/AddPortfolio";
-// import EditMembers from "../../components/Modal.jsx/Members/MembersEditMembers";
-// import DeleteMembers from "../../components/Modal.jsx/Members/DeleteMembers";
-import EditMembers from "../../components/Modal.jsx/Members/EditMembers";
+import EditMembers from "../../components/Modal.jsx//MembersEditMembers";
 import DeleteMembers from "../../components/Modal.jsx/Members/DeleteMembers";
-// import GreenButton from "../../components/Buttonn";
 import GreenButton from "../../components/Buttonn";
 
 
@@ -86,7 +83,7 @@ export default function Members(){
 
     return (
         <DashboardLayout>
-            <BasicModal handleClose={handleClose} open={open} body={<AddPorfolio handleClose={handleClose} />}/>
+            <BasicModal handleClose={handleClose} open={open} body={Committeelio handleClose={handleClose} />}/>
             <BasicModal handleClose={handleClose1} open={openEditMember} body={<EditMembers handleClose={handleClose1} body='hello' />}/>
             <BasicModal handleClose={handleCloseDelete} open={openDeleteMember} body={<DeleteMembers handleClose={handleCloseDelete} body='hello' />}/>
             <Grid>    

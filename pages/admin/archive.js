@@ -6,9 +6,10 @@ import PropTypes  from "prop-types";
 import {ArchiveTable, CustomizedTables, MemberTable} from "../../components/Dashboard/Admin/Tables";
 import BasicModal from "../../components/Modals";
 import HeadText from "../../components/Dashboard/DashboardHead";
-import AddPorfolio from "../../components/Modal.jsx/AddPortfolio";
-import EditMembers from "../../components/Modal.jsx/EditMembers";
-import DeleteMembers from "../../components/Modal.jsx/DeleteMembers";
+import DeleteArchive from "../../components/Modal.jsx/Archive/DeleteArchive";
+// import AddPorfolio from "../../components/Modal.jsx/AddPortfolio";
+// import EditMembers from "../../components/Modal.jsx/EditMembers";
+// import DeleteMembers from "../../components/Modal.jsx/DeleteMembers";
 
 
 export default function Archive(){
@@ -79,9 +80,9 @@ export default function Archive(){
 
     return (
         <DashboardLayout>
-            <BasicModal handleClose={handleClose} open={open} body={<AddPorfolio handleClose={handleClose} />}/>
-            <BasicModal handleClose={handleClose1} open={openEditMember} body={<EditMembers handleClose={handleClose1} body='hello' />}/>
-            <BasicModal handleClose={handleCloseDelete} open={openDeleteMember} body={<DeleteMembers handleClose={handleCloseDelete} body='hello' />}/>
+            {/* <BasicModal handleClose={handleClose} open={open} body={<AddPorfolio handleClose={handleClose} />}/>
+            <BasicModal handleClose={handleClose1} open={openEditMember} body={<EditMembers handleClose={handleClose1} body='hello' />}/> */}
+            <BasicModal handleClose={handleCloseDelete} open={openDeleteMember} body={<DeleteArchive handleClose={handleCloseDelete} body='hello' />}/>
             <Grid px={2}>    
                 <HeadText text='Archive'/>
                     <Grid container my={2} py={1} className='rounded-corners' px={2}>

@@ -6,12 +6,12 @@ import { DashboardLayout } from "../../components/Dashboard/Admin/Sidebar/dashbo
 import PropTypes  from "prop-types";
 import {AllEventTable, CustomizedTables, MemberEventTable, MemberTable, NationalEventTable, StateEventTable} from "../../components/Dashboard/Admin/Tables";
 import BasicModal from "../../components/Modals";
-import HeadText from "../../components/Dashboard/DashboardHead";
-import AddPorfolio from "../../components/Modal.jsx/AddPortfolio";
-import EditMembers from "../../components/Modal.jsx/EditMembers";
-import DeleteMembers from "../../components/Modal.jsx/DeleteMembers";
+import AddPorfolio from "../../components/Modal.jsx/Members/AddPortfolio";
+import EditEvent from "../../components/Modal.jsx/events/EditEvent";
+import DeleteMembers from "../../components/Modal.jsx/Members/DeleteMembers";
 import GreenButton from "../../components/Buttonn";
-
+import DeleteEvent from "../../components/Modal.jsx/events/DeleteEvent";
+import AddEvent from "../../components/Modal.jsx/events/AddEvent";
 
 export default function Events(){
 
@@ -130,9 +130,9 @@ export default function Events(){
 
     return (
         <DashboardLayout>
-            <BasicModal handleClose={handleClose} open={open} body={<AddPorfolio handleClose={handleClose} />}/>
-            <BasicModal handleClose={handleClose1} open={openEditMember} body={<EditMembers handleClose={handleClose1} body='hello' />}/>
-            <BasicModal handleClose={handleCloseDelete} open={openDeleteMember} body={<DeleteMembers handleClose={handleCloseDelete} body='hello' />}/>
+            <BasicModal handleClose={handleClose} open={open} body={<AddEvent handleClose={handleClose} />}/>
+            <BasicModal handleClose={handleClose1} open={openEditMember} body={<EditEvent handleClose={handleClose1} body='hello' />}/>
+            <BasicModal handleClose={handleCloseDelete} open={openDeleteMember} body={<DeleteEvent handleClose={handleCloseDelete} body='hello' />}/>
             <Grid>    
                 <Tabs value={value} onChange={handleChange} >
                     <Tab  {...a11yProps(0)} label="All Events" className='text' sx={{textTransform:'capitalize'}} >Hell</Tab>
@@ -167,6 +167,7 @@ export default function Events(){
                         paddingX={5}
                         paddingY={1.5}
                         fontWeight={500}
+                        click={()=>setOpen(true)}
                         />
                     </Grid><br/>
                     <AllEventTable tableHead={allEventFields} rows={allRows}/>

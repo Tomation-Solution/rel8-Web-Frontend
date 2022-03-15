@@ -6,9 +6,10 @@ import PropTypes  from "prop-types";
 import {ArchiveTable, CustomizedTables, MemberTable, NewsTable} from "../../components/Dashboard/Admin/Tables";
 import BasicModal from "../../components/Modals";
 import HeadText from "../../components/Dashboard/DashboardHead";
-import AddPorfolio from "../../components/Modal.jsx/AddPortfolio";
-import EditMembers from "../../components/Modal.jsx/EditMembers";
-import DeleteMembers from "../../components/Modal.jsx/DeleteMembers";
+import AddNews from "../../components/Modal.jsx/News/AddNews";
+import EditNews from "../../components/Modal.jsx/News/EditNews";
+import DeleteNews from "../../components/Modal.jsx/News/DeleteNews";
+
 
 
 export default function News(){
@@ -48,9 +49,9 @@ export default function News(){
 
     return (
         <DashboardLayout>
-            <BasicModal handleClose={handleClose} open={open} body={<AddPorfolio handleClose={handleClose} />}/>
-            <BasicModal handleClose={handleClose1} open={openEditMember} body={<EditMembers handleClose={handleClose1} body='hello' />}/>
-            <BasicModal handleClose={handleCloseDelete} open={openDeleteMember} body={<DeleteMembers handleClose={handleCloseDelete} body='hello' />}/>
+            <BasicModal handleClose={handleClose} open={open} body={<AddNews handleClose={handleClose} />}/>
+            <BasicModal handleClose={handleClose1} open={openEditMember} body={<EditNews handleClose={handleClose1} body='hello' />}/>
+            <BasicModal handleClose={handleCloseDelete} open={openDeleteMember} body={<DeleteNews handleClose={handleCloseDelete} body='hello' />}/>
             <Grid px={2}>    
                 <HeadText text='News'/>
                     <Grid container my={2} py={1} className='rounded-corners' px={2}>
@@ -70,7 +71,6 @@ export default function News(){
                         </Grid><br/>
                     <NewsTable tableHead={memberFields} rows={rows}/>
                 </Grid>
-            
         </DashboardLayout>
     )
 }

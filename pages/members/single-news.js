@@ -8,7 +8,7 @@ import NewsImage from '../../images/Vectorlanding.png'
 export default function SingleNews(props){
     return(
         <DashboardLayout px={2}>
-            <Grid mx={2}>
+            <Grid mx={3}>
         {/* <Grid container md={10} justifyContent='center' sx={{margin:'0 auto'}}> */}
             <Grid><Image src={NewsImage} className='rounded-corners'/></Grid>
             <Grid container justifyContent='space-between' py={3}> 
@@ -25,7 +25,7 @@ export default function SingleNews(props){
                 </Grid> 
             </Grid>
             <Grid>
-                <Typography className='text' variant='body2' xs={{fontFamily:'poppings'}}>
+                <Typography className='text' textAlign='justify' variant='body2' xs={{fontFamily:'poppings'}}>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum....... Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsumLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsumLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
                 </Typography>
             </Grid>

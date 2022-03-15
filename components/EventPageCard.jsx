@@ -57,7 +57,7 @@ export default function EventPageCard (props){
             </Modal>
             <Image src={props.image} marginTop={2} height='600px' className='rounded-corners'/>
             <Typography variant='subtitle2' className='light-text'  marginY={1}>{props.date}</Typography>
-            <Typography marginBottom={2}>{props.body}</Typography>
+            <Typography px={1} textAlign='justify' marginBottom={2}>{props.body}</Typography>
             <Grid md={10} sm={9} style={{margin:'0 auto'}}>
                 {/* <Button variant='contained'  size='small' className={[styles.button, 'button-lower rounded-button'] }>
                     More
