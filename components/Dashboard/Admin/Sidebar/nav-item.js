@@ -160,6 +160,28 @@ export const NavItem = (props) => {
             </Box>
           </Button>
         </NextLink>
+
+        <NextLink href='/admin/gallery' passHref>
+          <Button
+            component="a"
+            // startIcon={icon}
+            disableRipple
+            sx={{
+              backgroundColor: router.pathname=='/admin/gallery' && '#E1F1DC', borderRadius: 1,
+              color: router.pathname=='/admin/gallery' ? '#2B4A21' : 'white', fontWeight: '300',
+              fontSize:13, justifyContent: 'flex-start', px: 3, ml:5,
+              py:0.5, textAlign: 'left', textTransform: 'none', width: '100%',
+              '& .MuiButton-startIcon': { color: active ? '#2B4A21' : 'neutral.400'
+              }, '&:hover': { backgroundColor: 'rgba(255,255,255, 0.08)'
+              }
+            }}
+          >
+            <Box sx={{ flexGrow: 1 }}>
+              Gallery
+            </Box>
+          </Button>
+        </NextLink>
+
       </Collapse>
     </List>}
     </ListItem>

@@ -8,6 +8,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Button, IconButton } from '@mui/material';
 import { Close, DeleteForeverRounded } from '@mui/icons-material';
+import Image from 'next/image';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -362,6 +363,34 @@ export function NewsTable(props) {
               <StyledTableCell className='light-text' >{row.date}</StyledTableCell>
               {/* <StyledTableCell className='light-text' >{row.address}</StyledTableCell> */}
               <StyledTableCell className='light-text' >{row.Reader}</StyledTableCell>
+              <StyledTableCell className='light-text' >{row.action}</StyledTableCell>
+            </StyledTableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+}
+
+
+export function GalleryTable(props) {
+  return (
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+        <TableHead>
+          <TableRow>
+            {props.tableHead ? props.tableHead.map((e)=><StyledTableCell>{e}</StyledTableCell>):''}
+          </TableRow>
+        </TableHead>
+        <TableBody className='text'>
+          {props.rows.map((row) => (
+            <StyledTableRow key={row.sn}>
+              <StyledTableCell className='light-text' component="th" scope="row">
+                {row.sn}
+              </StyledTableCell>
+              {/* <StyledTableCell className='light-text' >{row.post}</StyledTableCell> */}
+              <StyledTableCell className='light-text' ><Image src={row.image} height={'50px'} width={'50px'}/> </StyledTableCell>
+              <StyledTableCell className='light-text' >{row.title}</StyledTableCell>
               <StyledTableCell className='light-text' >{row.action}</StyledTableCell>
             </StyledTableRow>
           ))}
