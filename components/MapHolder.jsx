@@ -1,6 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import styles from '../styles/Home.module.css';
-import Map from '../images/MAP.PNG';
+// import Map from '../images/MAP.PNG';
+import Map from "./Map";
 import Image from "next/image";
 
 
@@ -18,7 +19,8 @@ export default function MapHolder (){
                 </Grid>
                 <Grid item md={8}>
                     {/* <div id="map"></div> */}
-                    <Image src={Map} height='400vh'/>
+                    {/* <Image src={Map} height='400vh'/> */}
+                    <Map/>
                     {/* <div dangerouslySetInnerHTML={{ __html: "<iframe src='http://simplemaps.com/custom/country/48SMs9Lu' />"}} /> */}
                 </Grid>
                 

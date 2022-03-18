@@ -9,13 +9,16 @@ import Logo from '../images/ANNI-Logo1 1.png'
 import Image from "next/image"
 import Footer from "../components/Footer"
 import GreenButton from "../components/Buttonn"
+import { useRouter } from "next/router"
+
 export default function Login (){
 
     const [showPassword, setShowPassword]= useState(true)
+    const router = useRouter()
     return(
         <Grid >
             <Navbar/>
-            <HeroSection/>
+            <HeroSection message={"AANI  "+ " "+router.query.login + "  Chapter"}/>
             
             <Grid className={styles.loginBg}   >
             {/* <center><Image src={Logo}/></center> */}
