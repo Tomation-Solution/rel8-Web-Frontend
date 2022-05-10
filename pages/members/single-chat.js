@@ -50,17 +50,17 @@ export default function SingleChat (){
     return(
         <DashboardLayout>
         <Grid mx={1}>
-            <Grid container justifyContent='space-between' paddingY={2}>
+            <Grid container justifyContent='space-between' py={2}>
                 <Typography marginBottom={2} className='text'>Private Chatroom</Typography>
                 <GreenButton text='General Chat' click={()=>Router.back()} radius='10px'
-                textColor='white' paddingY={1} paddingX={2} bg='#436937'
+                textColor='white' py={1} px={2} bg='#436937'
                 />
             </Grid>
 
             <Grid container>
                 
-                <Grid item lg={3} marginRight={2} sx={{height:'75vh'}} className='rounded-corners ' paddingY={2}>
-                    <Grid className='light-grey-bg rounded-corners' paddingX={2} marginBottom={1} paddingY={1} >
+                <Grid item lg={3} marginRight={2} sx={{height:'75vh'}} className='rounded-corners ' py={2}>
+                    <Grid className='light-grey-bg rounded-corners' px={2} marginBottom={1} py={1} >
                         <TextField 
                             variant='standard' 
                             size='small' 
@@ -91,12 +91,12 @@ export default function SingleChat (){
                     <ChatCard image={user.image} name={user.name} message='sddsdsds' header={true}/>
                     :''
                     }
-                    <Grid item lg={12} sx={{height:'75vh'}} className='rounded-corners light-green-bg' paddingY={2}>
+                    <Grid item lg={12} sx={{height:'75vh'}} className='rounded-corners light-green-bg' py={2}>
                         { user ?
                         <Grid className='chat-bg' sx={{height:'70vh', overflow:'scroll', overflowX:'hidden'}} >
                             {messages.map((e)=>
                             (e.sender=='me' ?
-                                <Grid container marginX={3} marginY={1} sx={{maxWidth:'60%', minWidth:'10%', borderRadius:'10px', float:'right'}} paddingX={1} paddingBottom={1} className='dark-green-bg'>
+                                <Grid container marginX={3} marginY={1} sx={{maxWidth:'60%', minWidth:'10%', borderRadius:'10px', float:'right'}} px={1} paddingBottom={1} className='dark-green-bg'>
                                     <Grid container >
                                         <Typography textAlign='right' variant='caption' sx={{size:'7px', width:'100%'}}  fontWeight='300' className='white-text' > {e.date + ' - ' + e.time} </Typography>
                                     </Grid>
@@ -104,7 +104,7 @@ export default function SingleChat (){
                                         <Typography variant='body2' fontWeight='300' className='white-text' > {e.message} </Typography>
                                     </Grid>
                                 </Grid>:
-                                <Grid container marginX={3} marginY={1} sx={{maxWidth:'60%', minWidth:'10%', borderRadius:'10px'}} paddingX={1} paddingBottom={1} className='white-bg'>
+                                <Grid container marginX={3} marginY={1} sx={{maxWidth:'60%', minWidth:'10%', borderRadius:'10px'}} px={1} paddingBottom={1} className='white-bg'>
                                     <Grid container justifyContent='space-between'>
                                         <Grid item>
                                             <Typography textAlign='right' variant='caption' sx={{size:'7px', width:'100%'}}  fontWeight='300' className='light-text' > {e.sender} </Typography>
@@ -122,8 +122,8 @@ export default function SingleChat (){
            
                         </Grid> : 
                         <Typography textAlign='center' >Select a user to chat with</Typography>}
-                        <Grid md={6} paddingX={1} container justifyContent='space-between'   marginTop={5} position='fixed' bottom='10px' className='rounded-corners light-grey-bg'>
-                            <Grid item paddingY={1}  >
+                        <Grid md={6} px={1} container justifyContent='space-between'   marginTop={5} position='fixed' bottom='10px' className='rounded-corners light-grey-bg'>
+                            <Grid item py={1}  >
                                 <IconButton >
                                     <AddToPhotos/>
                                 </IconButton>
@@ -139,7 +139,7 @@ export default function SingleChat (){
                                     InputProps={{ disableUnderline:true }}
                                 />
                             </Grid>
-                            <Grid item paddingY={1}>
+                            <Grid item py={1}>
                                 <IconButton onClick={sendMessage}>
                                 <SendRounded/>
                                 </IconButton>

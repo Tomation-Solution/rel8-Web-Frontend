@@ -40,7 +40,7 @@ export default function Directory(){
                             </Button> */}
                         </Grid>
                         <Grid item>
-                            <Button  paddingY={1} variant='contained' style={{backgroundColor:'#365C2A'}} >
+                            <Button  py={1} variant='contained' style={{backgroundColor:'#365C2A'}} >
                                 <SearchRounded/>
                             </Button>
                         </Grid>

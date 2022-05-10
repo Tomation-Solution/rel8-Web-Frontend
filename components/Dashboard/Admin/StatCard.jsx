@@ -5,7 +5,7 @@ import {Avatar, Grid, IconButton, Typography} from '@mui/material';
 function StatCard(props) {
   return (
     <Grid container className='rounded-corners'
-     justifyContent='space-evenly' paddingX={2} paddingY={3} sx={{bgcolor:props.color?props.color:'#F8F8F8'}}>
+     justifyContent='space-evenly' px={2} py={3} sx={{bgcolor:props.color?props.color:'#F8F8F8'}}>
         <Grid item>
            { props.hasBg ?
             <Avatar  sx={{ bgcolor: props.iconBg }}>

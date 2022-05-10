@@ -70,13 +70,14 @@ export default function Navbar(){
       const classes = useStyles();
    return( 
    <AppBar className={styles.appbar}  style={{backgroundColor:'#fff', boxShadow:'none'}}>
+       
        <Grid container sx={{width:'100%'}}  justifyContent='space-between'>
                <Grid item sm={4} marginLeft={2} >
                     <Image src={Logo} height='70px' className={styles.logo}  />
                 </Grid>
                 {width < 768 ?
                 <Grid md={11} >
-                    <Grid container paddingY={2}>
+                    <Grid container py={2}>
                         <IconButton marginTop={3} onClick={()=>setOpenTop(!openTop)}>
                             <MenuRounded />
                         </IconButton>

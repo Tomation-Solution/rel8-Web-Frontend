@@ -152,7 +152,7 @@ export default function AppDrawer () {
             </IconButton>
             <Grid container justifyContent='space-between'>
               <Grid item>
-                <Grid container paddingY={2} alignItems='center'>
+                <Grid container py={2} alignItems='center'>
                   <IconButton>
                     <ArrowBack />
                   </IconButton>
@@ -163,7 +163,7 @@ export default function AppDrawer () {
               </Grid>
               
               <Grid item md={3}>
-                <Grid container md={8}  justifyContent='space-around' alignItems='center' paddingY={1}>
+                <Grid container md={8}  justifyContent='space-around' alignItems='center' py={1}>
                   <IconButton>
                     <Avatar className='' onClick={()=>setSelected(13)} sx={{bgcolor:'black', height:26, width:26}}   />
                   </IconButton>

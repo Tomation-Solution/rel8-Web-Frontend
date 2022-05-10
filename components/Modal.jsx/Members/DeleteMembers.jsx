@@ -16,8 +16,8 @@ export default function DeleteMembers(props){
             
 
             <Grid md={12} mt={1} container justifyContent='space-around'>
-                <GreenButton text='Save' textColor='#fff' paddingY={1} radius={3} bg='#203719' paddingX={7} />
-                <GreenButton text='Cancel' textColor='#203719' paddingY={1} radius={3} bg='#E1F1DC' paddingX={7} click={()=>props.handleClose()} />
+                <GreenButton text='Save' textColor='#fff' py={1} radius={3} bg='#203719' px={7} />
+                <GreenButton text='Cancel' textColor='#203719' py={1} radius={3} bg='#E1F1DC' px={7} click={()=>props.handleClose()} />
             </Grid>
         </Grid>
     )

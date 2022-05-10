@@ -19,8 +19,8 @@ export default function Logout(props){
             
 
             <Grid md={12} mt={1} container justifyContent='space-around'>
-                <GreenButton text='Logout' textColor='#fff' paddingY={1} radius={3} paddingX={7} bg='#203719' />
-                <GreenButton text='Cancel' textColor='#203719' paddingY={1} radius={3} paddingX={7} bg='#E1F1DC' click={()=>props.handleClose()} />
+                <GreenButton text='Logout' textColor='#fff' py={1} radius={3} px={7} bg='#203719' />
+                <GreenButton text='Cancel' textColor='#203719' py={1} radius={3} px={7} bg='#E1F1DC' click={()=>props.handleClose()} />
             </Grid>
         </Grid>
     )

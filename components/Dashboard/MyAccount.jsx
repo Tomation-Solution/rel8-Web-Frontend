@@ -16,7 +16,7 @@ export default function MyAccount(props){
                 </Grid>
                 <Grid item>
                 <GreenButton  text='Pay All' bg='#436937' radius='10px' 
-                    paddingY={1} paddingX={4} textColor='white'/>
+                    py={1} px={4} textColor='white'/>
                 </Grid>
             </Grid>
             <br/>
@@ -44,7 +44,7 @@ export default function MyAccount(props){
                                 <TableCell className='light-text'>11-12-2022</TableCell>
                                 <TableCell style={{width:'20%'}} >
                                     <GreenButton marginX={2} text='Pay' bg='#436937' radius='10px' 
-                                    paddingY={1} paddingX={1} textColor='white'/>
+                                    py={1} px={1} textColor='white'/>
                                 </TableCell>
                                 {/* <TableCell className='light-text'>Financial Advisor</TableCell>
                                 <TableCell className='light-text'>Financial Advisory</TableCell>
@@ -57,7 +57,7 @@ export default function MyAccount(props){
                                 <TableCell className='light-text'>11-12-2022</TableCell>
                                 <TableCell className='light-text'>
                                     <GreenButton marginX={2} text='Reciept' bg='#436937' radius='10px' 
-                                    paddingY={1} paddingX={1} textColor='white' click={()=>props.setSelected(11) }/>
+                                    py={1} px={1} textColor='white' click={()=>props.setSelected(11) }/>
                                 </TableCell>
                                 {/* <TableCell className='light-text'>Financial Advisor</TableCell>
                                 <TableCell className='light-text'>Financial Advisory</TableCell>

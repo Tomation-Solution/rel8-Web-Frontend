@@ -27,7 +27,7 @@ export default function BasicModal(props) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Grid md={4} sm={10} sx={style}>
+        <Grid md={6} sm={10} sx={style}>
             {props.body}
         </Grid>
       </Modal>

@@ -48,20 +48,20 @@ export default function Chat (props){
     return(
         <DashboardLayout>
         <Grid mx={1}>
-            <Grid container justifyContent='space-between' paddingY={2}>
+            <Grid container justifyContent='space-between' py={2}>
                 <Typography marginBottom={2} className='text'>General Chatroom</Typography>
                 {/* <Link href='/members/single-chat'> */}
                 <GreenButton text='Private Chat' radius='10px' click={()=>Router.push({ pathname: '/members/single-chat', query: { name: 'Someone' }})}
-                textColor='white' paddingY={1} paddingX={2} bg='#436937'
+                textColor='white' py={1} px={2} bg='#436937'
                 />
                 {/* </Link> */}
             </Grid>
 
-            <Grid  sx={{height:'75vh'}} className='rounded-corners light-green-bg' paddingY={2}>
+            <Grid  sx={{height:'75vh'}} className='rounded-corners light-green-bg' py={2}>
                 <Grid className='chat-bg' sx={{height:'70vh', overflow:'scroll', overflowX:'hidden'}} >
                     {messages.map((e)=>
                     (e.sender=='me' ?
-                        <Grid container marginX={3} marginY={1} sx={{maxWidth:'60%', minWidth:'10%', borderRadius:'10px', float:'right'}} paddingX={1} paddingBottom={1} className='dark-green-bg'>
+                        <Grid container marginX={3} marginY={1} sx={{maxWidth:'60%', minWidth:'10%', borderRadius:'10px', float:'right'}} px={1} paddingBottom={1} className='dark-green-bg'>
                             <Grid container >
                                 <Typography textAlign='right' variant='caption' sx={{size:'7px', width:'100%'}}  fontWeight='300' className='white-text' > {e.date + ' - ' + e.time} </Typography>
                             </Grid>
@@ -69,7 +69,7 @@ export default function Chat (props){
                                 <Typography variant='body2' fontWeight='300' className='white-text' > {e.message} </Typography>
                             </Grid>
                         </Grid>:
-                        <Grid container marginX={3} marginY={1} sx={{maxWidth:'60%', minWidth:'10%', borderRadius:'10px'}} paddingX={1} paddingBottom={1} className='white-bg'>
+                        <Grid container marginX={3} marginY={1} sx={{maxWidth:'60%', minWidth:'10%', borderRadius:'10px'}} px={1} paddingBottom={1} className='white-bg'>
                             <Grid container justifyContent='space-between'>
                                 <Grid item>
                                     <Typography textAlign='right' variant='caption' sx={{size:'7px', width:'100%'}}  fontWeight='300' className='light-text' > {e.sender} </Typography>
@@ -85,8 +85,8 @@ export default function Chat (props){
                     )}
                 </Grid>
             </Grid>
-            <Grid md={10} paddingX={1} container justifyContent='space-between'   marginTop={5} position='fixed' bottom='10px' className='rounded-corners light-grey-bg'>
-                <Grid item paddingY={1}  >
+            <Grid md={10} px={1} container justifyContent='space-between'   marginTop={5} position='fixed' bottom='10px' className='rounded-corners light-grey-bg'>
+                <Grid item py={1}  >
                     <IconButton >
                         <AddToPhotos/>
                     </IconButton>
@@ -100,7 +100,7 @@ export default function Chat (props){
                         // InputProps={{ classes }}
                     />
                 </Grid>
-                <Grid item paddingY={1}>
+                <Grid item py={1}>
                     <IconButton onClick={sendMessage}>
                     <SendRounded/>
                     </IconButton>

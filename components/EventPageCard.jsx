@@ -27,18 +27,18 @@ export default function EventPageCard (props){
             >
                 {/* <Ty   pography>{props.header}</Typography> */}
                 <Grid container justifyContent='center' alignContent='center'   >
-                    <Grid sx={{width: 400, margin:'0 auto' }} paddingX={3} paddingY={4}  position='absolute' top='40%' className='light-green-bg rounded-corners'>
+                    <Grid sx={{width: 400, margin:'0 auto' }} px={3} py={4}  position='absolute' top='40%' className='light-green-bg rounded-corners'>
                         <Typography textAlign='center' className='text' variant='h5' fontWeight='600' id="parent-modal-title">
                             { props.btnText == 'Join' ? 'Join Event' : 'Register for Event'}
                         </Typography>
                         { props.btnText=='Join' ?
                         <Link href='http://www.zoom.com/meet'>
-                            <Typography textAlign='center' className='nav-link' paddingY={3}>
+                            <Typography textAlign='center' className='nav-link' py={3}>
                                 http://www.zoom.com/meet
                             </Typography>
                         </Link>
                         :
-                        <Typography textAlign='center' paddingY={2} className='text' id="parent-modal-description">
+                        <Typography textAlign='center' py={2} className='text' id="parent-modal-description">
                              
                             Confirm you wish to register for this event?
                         </Typography>}
@@ -47,8 +47,8 @@ export default function EventPageCard (props){
                         <Typography textAlign='center' paddingBottom={1} className='light-text'>Note this event attracts a fee of - N 25,000</Typography>
                         }
                         <Grid justifyContent='center' container>
-                            <GreenButton text='Yes' textColor='white' bg='#436937' paddingX={4} paddingY={1} radius={5} />
-                            <GreenButton text='Cancel' textColor='#436937'  paddingX={4} paddingY={1} radius={5} click={handleClose} />
+                            <GreenButton text='Yes' textColor='white' bg='#436937' px={4} py={1} radius={5} />
+                            <GreenButton text='Cancel' textColor='#436937'  px={4} py={1} radius={5} click={handleClose} />
                         </Grid>
                     </Grid>
                     
@@ -64,7 +64,7 @@ export default function EventPageCard (props){
                 </Button>
                 <GreenButton/> */}
                 <GreenButton text={props.btnText} radius='10px' click={handleOpen}
-               textColor='white' paddingY={1} paddingX={1}  bg='#436937'/>
+               textColor='white' py={1} px={1}  bg='#436937'/>
             </Grid>
         </Grid>
     )
