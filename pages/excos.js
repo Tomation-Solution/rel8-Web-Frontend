@@ -11,7 +11,7 @@ export default function Excos(){
         <Grid container>
             <HeadText text='Meet the Excos' />
 
-            <Grid container paddingX={2}>
+            <Grid container px={2}>
                 <ExcoCard 
                     image={ImageCard} 
                     name='MD Abubakar' 

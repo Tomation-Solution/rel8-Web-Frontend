@@ -13,7 +13,7 @@ export default function EventCard (props){
                         
                     </Button> */}
                     <GreenButton text='Register to Attend' radius='10px'
-                textColor='white' paddingY={1} paddingX={2} bg='#436937'/>
+                textColor='white' py={1} px={2} bg='#436937'/>
                 </Grid>
             </Grid>
         </Grid>

@@ -73,7 +73,7 @@ export default function Login (){
                     />
                 </Grid>
                 <br/>
-                <Grid container alignItems='center' justifyContent='space-between' paddingY={1}>
+                <Grid container alignItems='center' justifyContent='space-between' py={1}>
                     <Grid item><Typography className='text' variant='subtitle2' fontWeight='normal' color='grey'>Forgot Password?</Typography></Grid>
                     <Grid item >
                         <Typography className='text' variant='subtitle2' fontWeight='normal' color='grey'>
@@ -81,7 +81,7 @@ export default function Login (){
                     </Grid>
                 </Grid>
                 <GreenButton text='Login' radius='10px'
-               textColor='white' paddingY={1} paddingX={2} bg='#436937'/>
+               textColor='white' py={1} px={2} bg='#436937'/>
                 {/* <GreenButton text='Login' /> */}
                 {/* <Button variant='contained' size='large' className={styles.button}>Login</Button> */}
             </Grid>

@@ -164,8 +164,8 @@ export default function Events(){
                         bg='#365C2A'
                         radius={5}
                         textColor='white'
-                        paddingX={5}
-                        paddingY={1.5}
+                        px={5}
+                        py={1.5}
                         fontWeight={500}
                         click={()=>setOpen(true)}
                         />
@@ -194,8 +194,8 @@ export default function Events(){
                         bg='#365C2A'
                         radius={5}
                         textColor='white'
-                        paddingX={5}
-                        paddingY={1.5}
+                        px={5}
+                        py={1.5}
                         fontWeight={500}
                         /> */}
                     </Grid><br/>

@@ -120,8 +120,8 @@ export default function Members(){
                         bg='#365C2A'
                         radius={5}
                         textColor='white'
-                        paddingX={5}
-                        paddingY={1.5}
+                        px={5}
+                        py={1.5}
                         fontWeight={500}
                         />
 
@@ -130,8 +130,8 @@ export default function Members(){
                         bg='#365C2A'
                         radius={5}
                         textColor='white'
-                        paddingX={5}
-                        paddingY={1.5}
+                        px={5}
+                        py={1.5}
                         fontWeight={500}
                         />
                         {/* <Grid item alignContent='center' sx={{borderRadius:'5px'}} py={1} px={2} mx={1} className='dark-green-bg'>
@@ -162,8 +162,8 @@ export default function Members(){
                         bg='#365C2A'
                         radius={5}
                         textColor='white'
-                        paddingX={5}
-                        paddingY={2}
+                        px={5}
+                        py={2}
                         fontWeight={500}
                         /> */}
 
@@ -172,8 +172,8 @@ export default function Members(){
                         bg='#365C2A'
                         radius={5}
                         textColor='white'
-                        paddingX={5}
-                        paddingY={1.5}
+                        px={5}
+                        py={1.5}
                         fontWeight={500}
                         />
                     </Grid><br/>
@@ -205,8 +205,8 @@ export default function Members(){
                         bg='#365C2A'
                         radius={5}
                         textColor='white'
-                        paddingX={5}
-                        paddingY={1.5}
+                        px={5}
+                        py={1.5}
                         fontWeight={500}
                         />
                     </Grid><br/>
@@ -237,8 +237,8 @@ export default function Members(){
                         bg='#365C2A'
                         radius={5}
                         textColor='white'
-                        paddingX={5}
-                        paddingY={1.5}
+                        px={5}
+                        py={1.5}
                         fontWeight={500}
                         />
                     </Grid><br/>

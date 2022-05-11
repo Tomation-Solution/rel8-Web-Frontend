@@ -16,7 +16,7 @@ export default function Newscard (props){
                 </Button>
                 <GreenButton/> */}
                 <GreenButton text='More' radius='10px'
-               textColor='white' paddingY={1} paddingX={1}  bg='#436937'/>
+               textColor='white' py={1} px={1}  bg='#436937'/>
             </Grid>
         </Grid>
     )

@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function ChatCard(props){
     return (
-        <Grid  paddingY={1} paddingX={2} marginY={1} className={`rounded-corners ${props.bg}`}>
+        <Grid  py={1} px={2} marginY={1} className={`rounded-corners ${props.bg}`}>
             <Typography variant='caption' className='light-text' fontWeight='normal' textAlign='center'>
                 {props.date} {props.time}
             </Typography>

@@ -8,7 +8,7 @@ export default function Receipt(){
             <Typography className='text ' textAlign='center' variant='h5' fontWeight='700'>Receipt</Typography>
             <br/>
             <Grid md={6} style={{margin: '0 auto'}} className='light-grey-bg rounded-corners'>
-                <Grid className='dark-green-bg' paddingLeft={5} paddingY={2}> 
+                <Grid className='dark-green-bg' paddingLeft={5} py={2}> 
                     <Typography className='text white-text'>
                     Receipt for
                     </Typography>
@@ -51,7 +51,7 @@ export default function Receipt(){
             </Grid>
             <br/>
             <Grid md={3} marginTop={2} style={{margin:'0 auto'}}>
-                <GreenButton text='Print' bg='#203719' textColor='white' radius={5} paddingY={1} paddingX={3} />
+                <GreenButton text='Print' bg='#203719' textColor='white' radius={5} py={1} px={3} />
             </Grid>
         </Grid>
     )

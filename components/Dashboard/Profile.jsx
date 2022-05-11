@@ -5,7 +5,7 @@ import HeadText from "./DashboardHead"
 
 export default function Profile (props){
     return(
-        <Grid container paddingX={2} >
+        <Grid container px={2} >
             <Grid container marginBottom={2}>
               <HeadText text='Profile' />  
             </Grid>

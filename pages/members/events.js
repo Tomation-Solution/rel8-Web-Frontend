@@ -16,7 +16,7 @@ export default function Events(){
         <Grid>
             <Grid container justifyContent='space-around'>
                 <Grid container md={7}  item>
-                    <Grid container paddingY={4} alignItems='center'  justifyContent='space-around' className='light-green-bg rounded-corners'style={{maxHeight:'12vh'}}>
+                    <Grid container py={4} alignItems='center'  justifyContent='space-around' className='light-green-bg rounded-corners'style={{maxHeight:'12vh'}}>
                         <Grid item>
                             <Typography fontWeight='bold' className='text' textAlign='center'>
                                 18
@@ -58,7 +58,7 @@ export default function Events(){
                     value={value} 
                     minDate={new Date()}
                     className='light-grey-bg rounded-corners'
-                    paddingY={3}
+                    py={3}
                     tileClassName='light-green-bg rounded-corners'
                     
 
